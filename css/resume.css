@@ -60,6 +60,21 @@ p.lead {
   .social-icons a:hover {
     background-color: #748B6F; }
 
+/* Restored Social Icons for Sidebar */
+.list-social-icons {
+    text-align: center;
+}
+.list-social-icons .list-inline-item {
+    margin: 0 0.25rem;
+}
+.list-social-icons .fa-stack {
+    color: #fff;
+    transition: all .2s;
+}
+.list-social-icons .fa-stack:hover .fa-circle{
+    color: #748B6F;
+}
+
 .dev-icons {
   font-size: 3rem; }
   .dev-icons .list-inline-item i:hover {
@@ -129,3 +144,49 @@ a {
   color: #748B6F; }
   a:hover, a:focus, a:active {
     color: #5b6b5b; }
+
+/* Your Custom Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px; /* Desktop width */
+}
+
+.skill-item img {
+  width: 80px;  /* Desktop icon size */
+  height: 80px; /* Desktop icon size */
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+/* Mobile Adjustments for Skills Grid */
+@media (max-width: 767px) {
+  .skills-grid {
+    gap: 1rem;
+  }
+  .skill-item {
+    width: 80px; /* Mobile width */
+  }
+  .skill-item img {
+    width: 50px;  /* Mobile icon size */
+    height: 50px; /* Mobile icon size */
+  }
+  .skill-item span {
+    font-size: 0.8rem;
+  }
+}color: #5b6b5b; }
