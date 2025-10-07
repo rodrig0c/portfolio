@@ -273,7 +273,7 @@ a:active {
   }
   /* Ajuste no tamanho e cor dos novos ícones mobile */
   .mobile-header-wrapper .list-social-icons .fa-stack {
-    font-size: 0.8rem; /* Deixa os ícones um pouco menores */
+    font-size: 0.95rem; /* Deixa os ícones um pouco menores */
     transition: transform 0.2s ease-in-out;
   }
   .mobile-header-wrapper .list-social-icons .fa-circle {
