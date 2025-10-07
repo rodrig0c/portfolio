@@ -259,3 +259,33 @@ a:active {
     display: none;
   }
 }
+/* === LAYOUT FINAL DO CABEÇALHO MOBILE === */
+@media (max-width: 991.98px) {
+  .mobile-header-wrapper {
+    display: flex;
+    justify-content: space-between; /* Alinha o botão à esquerda e os ícones à direita */
+    align-items: center;
+    width: 100%;
+  }
+  /* Esconde os ícones de redes sociais originais (do menu desktop) */
+  #navbarSupportedContent .list-social-icons {
+    display: none;
+  }
+  /* Ajuste no tamanho e cor dos novos ícones mobile */
+  .mobile-header-wrapper .list-social-icons .fa-stack {
+    font-size: 0.8rem; /* Deixa os ícones um pouco menores */
+    transition: transform 0.2s ease-in-out;
+  }
+  .mobile-header-wrapper .list-social-icons .fa-circle {
+    color: #495057;
+  }
+  .mobile-header-wrapper .list-social-icons a:hover .fa-stack {
+    transform: scale(1.15);
+  }
+}
+@media (min-width: 992px) {
+  /* Esconde todo o wrapper do cabeçalho mobile no desktop */
+  .mobile-header-wrapper {
+    display: none;
+  }
+}
