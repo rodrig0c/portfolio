@@ -232,18 +232,20 @@ a:active {
   }
 }
 
-/* === FIX DEFINITIVO PARA ICONES SOCIAIS === */
+/* === FIX DEFINITIVO PARA ICONES SOCIAIS (COM HOVER DE ZOOM) === */
 #sideNav .list-social-icons {
     padding-top: 1.5rem;
     text-align: center;
 }
+#sideNav .list-social-icons .fa-stack {
+    transition: transform 0.2s ease-in-out; /* Adiciona transição suave para o zoom */
+}
 #sideNav .list-social-icons .fa-stack .fa-circle {
     color: #495057;
-    transition: all 0.3s;
 }
 #sideNav .list-social-icons .fa-stack .fa-inverse {
     color: #ffffff;
 }
-#sideNav .list-social-icons a:hover .fa-circle {
-    color: #748B6F;
+#sideNav .list-social-icons a:hover .fa-stack {
+    transform: scale(1.15); /* Aumenta o tamanho do ícone em 15% */
 }
