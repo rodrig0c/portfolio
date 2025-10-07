@@ -249,3 +249,13 @@ a:active {
 #sideNav .list-social-icons a:hover .fa-stack {
     transform: scale(1.15); /* Aumenta o tamanho do ícone em 15% */
 }
+/* === AJUSTE FINAL NAVBAR MOBILE === */
+@media (max-width: 991.98px) {
+  #sideNav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #sideNav .navbar-brand {
+    display: none;
+  }
+}
