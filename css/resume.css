@@ -61,18 +61,23 @@ p.lead {
     background-color: #748B6F; }
 
 /* Restored Social Icons for Sidebar */
+/* Social Icons for Sidebar */
 .list-social-icons {
-    text-align: center;
+  text-align: center;
+  padding-top: 1.5rem;
 }
+
 .list-social-icons .list-inline-item {
-    margin: 0 0.25rem;
+  margin: 0 0.35rem;
 }
-.list-social-icons .fa-stack {
-    color: #fff;
-    transition: all .2s;
+
+.list-social-icons .fa-stack .fa-circle {
+  color: #495057; /* Cor de fundo escura para o círculo */
+  transition: all 0.2s ease-in-out;
 }
-.list-social-icons .fa-stack:hover .fa-circle{
-    color: #748B6F;
+
+.list-social-icons .fa-stack:hover .fa-circle {
+  color: #748B6F; /* Cor de destaque ao passar o mouse */
 }
 
 .dev-icons {
