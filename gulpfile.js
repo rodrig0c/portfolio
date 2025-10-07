@@ -1,4 +1,4 @@
-/* gulpfile.js  –  pronto para Dart-Sass (node-sass removido) */
+/* gulpfile.js – pronto para Dart-Sass (node-sass removido) */
 var gulp        = require('gulp');
 var sass        = require('gulp-sass')(require('sass'));   // <-- mudança chave
 var browserSync = require('browser-sync').create();
@@ -46,8 +46,8 @@ gulp.task('minify-js', function () {
     .pipe(browserSync.stream());
 });
 
-// Copia vendors
-gulp.task('copy', function () {
+// Copia vendors (TAREFA CORRIGIDA)
+gulp.task('copy', function(done) {
   gulp.src([
     'node_modules/bootstrap/dist/**/*',
     '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'
@@ -85,7 +85,9 @@ gulp.task('copy', function () {
     '!node_modules/simple-line-icons/*.json',
     '!node_modules/simple-line-icons/*.md'
   ]).pipe(gulp.dest('vendor/simple-line-icons'));
+  done();
 });
+
 
 // Tarefas principais
 gulp.task('default', gulp.parallel('sass', 'minify-css', 'minify-js', 'copy'));
