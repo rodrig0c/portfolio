@@ -280,7 +280,7 @@ a:active {
     color: #495057;
   }
   .mobile-header-wrapper .list-social-icons a:hover .fa-stack {
-    transform: scale(1.15);
+    transform: scale(1);
   }
 }
 @media (min-width: 992px) {
