@@ -289,3 +289,10 @@ a:active {
     display: none;
   }
 }
+/* === CORREÇÃO FINAL PARA DUPLICAÇÃO MOBILE === */
+@media (max-width: 991.98px) {
+  /* Esconde o bloco de ícones da barra lateral (desktop) quando estiver no mobile */
+  #sideNav .sidebar-icons {
+    display: none;
+  }
+}
