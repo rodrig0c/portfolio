@@ -231,3 +231,19 @@ a:active {
     font-size: .8rem;
   }
 }
+
+/* === FIX DEFINITIVO PARA ICONES SOCIAIS === */
+#sideNav .list-social-icons {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+#sideNav .list-social-icons .fa-stack .fa-circle {
+    color: #495057;
+    transition: all 0.3s;
+}
+#sideNav .list-social-icons .fa-stack .fa-inverse {
+    color: #ffffff;
+}
+#sideNav .list-social-icons a:hover .fa-circle {
+    color: #748B6F;
+}
