@@ -526,3 +526,28 @@
   </body>
 
 </html>
+
+<script>
+// Detecta imagens muito pequenas e aplica classe especial
+document.addEventListener('DOMContentLoaded', function() {
+    const cardImages = document.querySelectorAll('.portfolio-grid .card-img-top');
+    
+    cardImages.forEach(img => {
+        img.addEventListener('load', function() {
+            const container = this.closest('.card-img-wrapper');
+            // Se a imagem for menor que 50% do container, considera pequena
+            if (this.naturalWidth < 150 || this.naturalHeight < 100) {
+                container.classList.add('has-small-image');
+            }
+        });
+        
+        // Tratamento de erro
+        img.addEventListener('error', function() {
+            this.classList.add('error');
+            this.alt = 'Imagem não carregada';
+        });
+    });
+});
+</script>
+
+
