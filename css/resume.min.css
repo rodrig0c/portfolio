@@ -447,3 +447,121 @@ a:active {
         transform: translateY(0);
     }
 }
+
+
+
+/* ====== AJUSTES PARA O MODAL - IMAGEM PRINCIPAL ====== */
+.modal-body img.img-fluid.mb-3 {
+    max-width: 35% !important; /* REDUZIDA DE 50% PARA 35% */
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Ajustes responsivos para a imagem do modal */
+@media (max-width: 768px) {
+    .modal-body img.img-fluid.mb-3 {
+        max-width: 60% !important; /* UM POUCO MAIOR NO MOBILE */
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-body img.img-fluid.mb-3 {
+        max-width: 80% !important; /* AINDA MAIOR NO MOBILE PEQUENO */
+    }
+}
+
+/* ====== MELHORIAS GERAIS NO MODAL ====== */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #748B6F 0%, #5a6d57 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem 2rem;
+}
+
+.modal-header .close {
+    color: white;
+    opacity: 0.8;
+    text-shadow: none;
+    font-size: 1.8rem;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+    color: white;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body h4 {
+    color: #2c5530;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.modal-body ul {
+    padding-left: 1.5rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* ====== BADGES NO MODAL ====== */
+.modal-body .badge {
+    margin: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* ====== BOTÕES NO MODAL ====== */
+.modal-body .btn {
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+}
+
+.modal-body .btn-primary {
+    background: linear-gradient(135deg, #748B6F 0%, #5a6d57 100%);
+    border: none;
+}
+
+.modal-body .btn-primary:hover {
+    background: linear-gradient(135deg, #5a6d57 0%, #4a5847 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(116, 139, 111, 0.3);
+}
+
+/* ====== IMAGENS DA GALERIA NO MODAL ====== */
+.modal-body .img-fluid.rounded {
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-body .img-fluid.rounded:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ====== TEXTO DO MODAL ====== */
+.modal-body p {
+    line-height: 1.6;
+    color: #495057;
+}
+
+.modal-body .text-muted {
+    color: #6c757d !important;
+    font-size: 0.9rem;
+}
