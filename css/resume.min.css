@@ -450,43 +450,30 @@ a:active {
 
 
 
-/* ====== AJUSTES PARA O MODAL - IMAGEM PRINCIPAL ====== */
+/* ====== AJUSTES PARA O MODAL - CORES E TAGS ====== */
 .modal-body img.img-fluid.mb-3 {
-    max-width: 35% !important; /* REDUZIDA DE 50% PARA 35% */
+    max-width: 35% !important;
     display: block;
     margin: 0 auto 1.5rem auto;
 }
 
-/* Ajustes responsivos para a imagem do modal */
-@media (max-width: 768px) {
-    .modal-body img.img-fluid.mb-3 {
-        max-width: 60% !important; /* UM POUCO MAIOR NO MOBILE */
-    }
-}
-
-@media (max-width: 576px) {
-    .modal-body img.img-fluid.mb-3 {
-        max-width: 80% !important; /* AINDA MAIOR NO MOBILE PEQUENO */
-    }
-}
-
-/* ====== MELHORIAS GERAIS NO MODAL ====== */
-.modal-content {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
+/* ====== HEADER DO MODAL - TÍTULO BRANCO ====== */
 .modal-header {
     background: linear-gradient(135deg, #748B6F 0%, #5a6d57 100%);
-    color: white;
+    color: white !important; /* TÍTULO BRANCO */
     border-bottom: none;
     border-radius: 12px 12px 0 0;
     padding: 1.5rem 2rem;
 }
 
+.modal-header .modal-title {
+    color: white !important; /* GARANTE QUE O TÍTULO FIQUE BRANCO */
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 .modal-header .close {
-    color: white;
+    color: white !important; /* X BRANCO */
     opacity: 0.8;
     text-shadow: none;
     font-size: 1.8rem;
@@ -494,35 +481,42 @@ a:active {
 
 .modal-header .close:hover {
     opacity: 1;
-    color: white;
+    color: white !important;
 }
 
 .modal-body {
     padding: 2rem;
 }
 
+/* ====== TÍTULOS DAS SEÇÕES - VERDE MUSGO ====== */
 .modal-body h4 {
-    color: #2c5530;
+    color: #748B6F !important; /* VERDE MUSGO DO TEMA */
     font-weight: 700;
     margin-bottom: 1rem;
     border-bottom: 2px solid #e9ecef;
     padding-bottom: 0.5rem;
+    font-family: 'Saira Extra Condensed', serif;
+    letter-spacing: 0.05rem;
 }
 
-.modal-body ul {
-    padding-left: 1.5rem;
-}
-
-.modal-body ul li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-}
-
-/* ====== BADGES NO MODAL ====== */
+/* ====== BADGES - VERDE MUSGO COM CANTOS MENOS ARREDONDADOS ====== */
 .modal-body .badge {
     margin: 0.2rem;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+    background-color: #748B6F !important; /* VERDE MUSGO */
+    border: none;
+    border-radius: 4px !important; /* CANTOS MENOS ARREDONDADOS */
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+}
+
+.modal-body .badge:hover {
+    background-color: #5a6d57 !important; /* VERDE MAIS ESCURO NO HOVER */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(116, 139, 111, 0.3);
 }
 
 /* ====== BOTÕES NO MODAL ====== */
@@ -542,6 +536,34 @@ a:active {
     background: linear-gradient(135deg, #5a6d57 0%, #4a5847 100%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(116, 139, 111, 0.3);
+}
+
+.modal-body .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.modal-body .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+/* ====== MELHORIAS GERAIS NO MODAL ====== */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-body ul {
+    padding-left: 1.5rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #495057;
 }
 
 /* ====== IMAGENS DA GALERIA NO MODAL ====== */
@@ -564,4 +586,32 @@ a:active {
 .modal-body .text-muted {
     color: #6c757d !important;
     font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    .modal-body img.img-fluid.mb-3 {
+        max-width: 60% !important;
+    }
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+    }
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-body img.img-fluid.mb-3 {
+        max-width: 80% !important;
+    }
+    .modal-header {
+        padding: 1rem 1.25rem;
+    }
+    .modal-body {
+        padding: 1.25rem;
+    }
+    .modal-body h4 {
+        font-size: 1.25rem;
+    }
 }
