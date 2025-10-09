@@ -301,31 +301,72 @@
       </section>
 
       <!-- ########################################### PROJETO 1 ##################################################################### -->
-    </div><div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">ESP32 Connect</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+ <div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Aplicativo iOS para controle de ESP32</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="img-fluid mb-3" src="img/projeto1.png" alt="Imagem principal do Projeto 1" style="max-width: 50%; display: block; margin: auto;">
+        
+        <div class="text-center my-3">
+          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
+          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Bluetooth</span>
+          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">iOS/Swift</span>
+        </div>
+
+        <h4 class="mt-4">Sobre o Projeto</h4>
+        <p>
+          Ferramentas on-line para criação de aplicativos móveis como o MIT App Inventor - muito utilizado em escolas técnicas como o Senai, não possuem (até a data de desenvolvimento desse projeto - outubro/24) suporte para o Bluetooth dos aparelhos Apple, como o iPhone. Pensando em sanar esse problema, este projeto versa sobre a criação de um aplicativo nativo iOS utilizando linguagem Swift que controla todas as GPIO's de um ou vários ESP32 simultaneamente utilizando conexão bluetooth low energy e WiFi.
+        </p>
+
+        <h4 class="mt-4">Funcionalidades</h4>
+        <ul>
+          <li>O aplicativo necessita do iOS 17 (ou superior)</li>
+          <li>Os cards de controle são pré-definidos para os periféricos mais utilizados no mundo da eletrônica/robótica educacional. <strong>Assim, é possível utilizar este aplicativo para diversos fins, tais como: controle de motores, eletrodomésticos em geral, ensino de robótica em escolas/plataformas, automação residencial e etc.</strong></li>
+          <li>Dentro do aplicativo há uma seção onde se encontra o firmware completo para ser enviado ao ESP32 utilizando a IDE do Arduino (ou outra qualquer), a pinagem do ESP32 de 30 pinos, monitor serial e tutorial de projetos básicos de eletrônica.</li>
+          <li>O aplicativo é rico em recursos de controle: analógicos, digitais e PWM. Foi pensado para auxiliar o ensino de robótica e automação residencial independente. Até o momento (set/2025) não existe nenhum aplicativo com tantos recursos disponível para download em nenhuma plataforma.</li>
+        </ul>
+
+        <h4 class="mt-4">Aplicativo</h4>
+        <p><strong>Apresentação inicial com breve tutorial sobre as funcionalidades do aplicativo</strong></p>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <img src="img/image0.png" class="img-fluid rounded">
           </div>
-          <div class="modal-body">
-            <img class="img-fluid mb-3" src="img/Projeto1.png" alt="Preview" style="max-width: 40%; display: block; margin: auto;">
-            <p>Native iOS App made to makers, hobbysts.</p>
-            <h6>Features</h6>
-            <ul>
-              <li>Swift</li>
-              <li>Xcode</li>
-            </ul>
-            <div class="text-right mt-4">
-              <a class="btn btn-primary" href="#" target="_blank">Live Demo</a>
-              <a class="btn btn-outline-secondary" href="#" target="_blank">Github</a>
-            </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/image1.png" class="img-fluid rounded">
           </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/image2.png" class="img-fluid rounded">
+          </div>
+        </div>
+        
+        <p><strong>Tela de conexão. Aqui estarão disponíveis os microcontroladores ESP32 para conexão tanto via Bluetooth quanto WiFi. É possível controlar o mesmo ESP32 com as duas conexões simultaneamente</strong></p>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <img src="img/image3.png" class="img-fluid rounded">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/image4.png" class="img-fluid rounded">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/image5.png" class="img-fluid rounded">
+          </div>
+        </div>
+        
+        <div class="text-right mt-4">
+          <a class="btn btn-primary" href="#" target="_blank">Live Demo</a>
+          <a class="btn btn-outline-secondary" href="#" target="_blank">Github</a>
         </div>
       </div>
     </div>
+  </div>
+</div>
     <!-- ########################################### PROJETO 2 ##################################################################### -->
     <div class="modal fade" id="modalProj2" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
