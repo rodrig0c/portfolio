@@ -296,3 +296,64 @@ a:active {
     display: none;
   }
 }
+
+/* ====== PORTFOLIO CARDS COM ALTURA FIXA ====== */
+.portfolio-grid .portfolio-item {
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.portfolio-grid .card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    transition: all .3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+.portfolio-grid .card-img-wrapper {
+    overflow: hidden;
+    height: 180px; /* ALTURA FIXA PARA TODAS AS IMAGENS */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+.portfolio-grid .card-img-top {
+    transition: transform .5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* MANTÉM PROPORÇÃO E PREENCHE O CONTAINER */
+}
+.portfolio-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.portfolio-grid .card:hover .card-img-top {
+    transform: scale(1.08);
+}
+.portfolio-grid .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 120px; /* ALTURA FIXA PARA O CORPO DO CARD */
+    padding: 1rem;
+}
+.portfolio-grid .card-title {
+    color: #748B6F;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.portfolio-grid .card-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
