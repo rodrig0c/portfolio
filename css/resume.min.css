@@ -452,7 +452,7 @@ a:active {
 
 /* ====== AJUSTES PARA O MODAL - CORES E TAGS ====== */
 .modal-body img.img-fluid.mb-3 {
-    max-width: 35% !important;
+    max-width: 25% !important;
     display: block;
     margin: 0 auto 1.5rem auto;
 }
