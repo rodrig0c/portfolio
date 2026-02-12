@@ -20,6 +20,7 @@
     <link href="css/resume.min.css" rel="stylesheet">
 
     <style>
+      /* Estilos do Portfolio (Mantidos) */
       .portfolio-grid .portfolio-item{cursor:pointer;margin-bottom:30px}
       .portfolio-grid .card{border:none;box-shadow:0 2px 6px rgba(0,0,0,.12);transition:all .3s ease;overflow:hidden}
       .portfolio-grid .card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
@@ -27,13 +28,62 @@
       .portfolio-grid .card-img-top{transition:transform .5s ease}
       .portfolio-grid .card:hover .card-img-top{transform:scale(1.08)}
       .portfolio-grid .card-title{color:#748B6F}
+
+      /* === NOVO: SELETOR DE IDIOMAS === */
+      .language-switcher {
+          position: fixed;
+          top: 15px;
+          right: 20px;
+          z-index: 9999;
+          background: rgba(255, 255, 255, 0.8);
+          padding: 5px 10px;
+          border-radius: 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      /* Ajuste para mobile para não ficar em cima do menu hamburguer */
+      @media (max-width: 992px) {
+          .language-switcher {
+              right: 70px; /* Joga para a esquerda do botão menu */
+              top: 10px;
+          }
+      }
+
+      .lang-btn {
+          cursor: pointer;
+          width: 32px;
+          height: auto;
+          margin: 0 4px;
+          opacity: 0.4;
+          transition: all 0.3s;
+          filter: grayscale(80%);
+      }
+
+      .lang-btn:hover, .lang-btn.active {
+          opacity: 1;
+          filter: grayscale(0%);
+          transform: scale(1.1);
+      }
+
+      /* Lógica de Ocultação */
+      /* Se o body tem a classe 'lang-en', esconde português */
+      body.lang-en .pt-content { display: none !important; }
+      
+      /* Se o body tem a classe 'lang-pt', esconde inglês */
+      body.lang-pt .en-content { display: none !important; }
     </style>
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ once: true, duration: 600 });</script>
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="lang-en">
+
+    <div class="language-switcher">
+        <img src="https://flagcdn.com/w40/br.png" class="lang-btn" data-lang="pt" alt="Português" title="Português">
+        <img src="https://flagcdn.com/w40/us.png" class="lang-btn" data-lang="en" alt="English" title="English">
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -76,11 +126,31 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">
+                <span class="en-content">About</span><span class="pt-content">Sobre</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">
+                <span class="en-content">Education</span><span class="pt-content">Educação</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">
+                <span class="en-content">Skills</span><span class="pt-content">Habilidades</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">
+                <span class="en-content">Interests</span><span class="pt-content">Interesses</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">
+                <span class="en-content">Projects</span><span class="pt-content">Projetos</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -122,28 +192,45 @@
           <div class="subheading mb-5">São Paulo - Brazil
             <a href="mailto:rodrigocosta@usp.br">rodrigocosta@usp.br</a>
           </div>
-          <p class="mb-5">As a passionate Electrical Engineering student from Poli-USP specializing in Electronics and Computer Systems, I am driven by the intersection of hardware and software. I am currently seeking an internship opportunity where I can leverage my skills in microcontroller programming, control systems, and data analysis to help create impactful technology.</p>
+          <p class="mb-5">
+            <span class="en-content">As a passionate Electrical Engineering student from Poli-USP specializing in Electronics and Computer Systems, I am driven by the intersection of hardware and software. I am currently seeking an internship opportunity where I can leverage my skills in microcontroller programming, control systems, and data analysis to help create impactful technology.</span>
+            <span class="pt-content">Como um apaixonado estudante de Engenharia Elétrica da Poli-USP, com ênfase em Sistemas Eletrônicos e Computacionais, sou movido pela interseção entre hardware e software. Atualmente busco uma oportunidade de estágio onde eu possa aplicar minhas habilidades em programação de microcontroladores, sistemas de controle e análise de dados para criar tecnologias impactantes.</span>
+          </p>
         </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
+          <h2 class="mb-5">
+              <span class="en-content">Education</span>
+              <span class="pt-content">Educação</span>
+          </h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <div class="d-flex align-items-start mb-4">
                 <img src="img/usplogo.jpg" alt="Logo Poli-USP" style="width: 75px; height: auto; margin-right: 20px;">
                 <div>
                   <h3 class="mb-0">Escola Politécnica da USP</h3>
-                  <div class="subheading mb-3">Bachelor of Electrical Engineer with emphasis on Electronic and Computer Systems</div>
-                   <div class="resume-date text-md-left"><span class="text-primary">Graduation on December/26</span></div>
+                  <div class="subheading mb-3">
+                      <span class="en-content">Bachelor of Electrical Engineer with emphasis on Electronic and Computer Systems</span>
+                      <span class="pt-content">Engenharia Elétrica com ênfase em Sistemas Eletrônicos e Computacionais</span>
+                  </div>
+                   <div class="resume-date text-md-left">
+                       <span class="text-primary">
+                           <span class="en-content">Graduation on December/26</span>
+                           <span class="pt-content">Formatura em Dezembro/26</span>
+                       </span>
+                   </div>
                 </div>
               </div>
               <div class="d-flex align-items-start">
                 <img src="img/senai.png" alt="Logo SENAI" style="width: 75px; height: auto; margin-right: 20px;">
                 <div>
                   <h3 class="mb-0">SENAI Roberto Simonsen</h3>
-                  <div class="subheading mb-3">Electronic Technician</div>
+                  <div class="subheading mb-3">
+                      <span class="en-content">Electronic Technician</span>
+                      <span class="pt-content">Técnico em Eletrônica</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,61 +238,56 @@
         </div>
       </section>
 
-      <!-- ====== NOVA SEÇÃO SKILLS com imagens + títulos ====== -->
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
+          <h2 class="mb-5">
+              <span class="en-content">Skills</span>
+              <span class="pt-content">Habilidades</span>
+          </h2>
           
-          <div class="subheading mb-4">Software and tools</div>
-          <!-- Container dos ícones -->
+          <div class="subheading mb-4">
+              <span class="en-content">Software and tools</span>
+              <span class="pt-content">Software e ferramentas</span>
+          </div>
           <div class="skills-grid">
-            <!-- 1 -->
             <figure class="skill-item">
               <img src="img/cpp.png" alt="C++">
               <figcaption>C/C++</figcaption>
             </figure>
             
-            <!-- 2 -->
             <figure class="skill-item">
               <img src="img/python.png" alt="Python">
               <figcaption>Python</figcaption>
             </figure>
             
-            <!-- 3 -->
             <figure class="skill-item">
               <img src="img/powerbi.png" alt="Power BI">
               <figcaption>Power BI</figcaption>
             </figure>
             
-            <!-- 4 -->
             <figure class="skill-item">
               <img src="img/office.png" alt="Office Bundle">
               <figcaption>Office Bundle</figcaption>
             </figure>
             
-            <!-- 5 -->
             <figure class="skill-item">
               <img src="img/excel.png" alt="Excel">
               <figcaption>Advanced Excel</figcaption>
             </figure>
-            <!-- 6 -->
             <figure class="skill-item">
               <img src="img/autocadel.svg" alt="AutoCad">
               <figcaption>AutoCad Electrical</figcaption>
             </figure>
-            <!-- 7 -->
             <figure class="skill-item">
               <img src="img/sql.png" alt="SQL">
               <figcaption>SQL</figcaption>
             </figure>
             
-            <!-- 8 -->
             <figure class="skill-item">
               <img src="img/kicad.png" alt="KiCad">
               <figcaption>KiCad PCB Design</figcaption>
             </figure>
             
-            <!-- 9 -->
             <figure class="skill-item">
               <img src="img/opencv.png" alt="OpenCV">
               <figcaption>Computer Vision (OpenCV)</figcaption>
@@ -230,8 +312,7 @@
           
           <div class="subheading mb-4">Hardware</div>
           
-          <div class="skills-grid">   <!-- abre a grade UMA vez -->
-            <figure class="skill-item">
+          <div class="skills-grid">   <figure class="skill-item">
               <img src="img/rpi.png" alt="Raspberry Pi">
               <figcaption>Raspberry Pi</figcaption>
             </figure>
@@ -256,37 +337,55 @@
               <figcaption>FPGA</figcaption>
             </figure>
             
-          </div>                      <!-- fecha a grade depois de TODOS os ícones -->
-      
-      </section>
+          </div>                      </section>
       
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
+          <h2 class="mb-5">
+              <span class="en-content">Interests</span>
+              <span class="pt-content">Interesses</span>
+          </h2>
 <ul class="fa-ul mb-0">
   <li>
     <i class="fa-li fa fa-cogs"></i>
-    <strong>Quantitative Finance:</strong> Analyzing financial markets through mathematical modeling, with a specific focus on derivatives and algorithmic strategies.
+    <strong>
+        <span class="en-content">Quantitative Finance:</span>
+        <span class="pt-content">Finanças Quantitativas:</span>
+    </strong> 
+    <span class="en-content">Analyzing financial markets through mathematical modeling, with a specific focus on derivatives and algorithmic strategies.</span>
+    <span class="pt-content">Análise de mercados financeiros através de modelagem matemática, com foco específico em derivativos e estratégias algorítmicas.</span>
   </li>
   <li>
  
     <i class="fa-li fa fa-line-chart"></i>
-    <strong>Applied AI:</strong> Leveraging machine learning and artificial intelligence for predictive data analysis.
+    <strong>
+        <span class="en-content">Applied AI:</span>
+        <span class="pt-content">IA Aplicada:</span>
+    </strong> 
+    <span class="en-content">Leveraging machine learning and artificial intelligence for predictive data analysis.</span>
+    <span class="pt-content">Aproveitamento de machine learning e inteligência artificial para análise preditiva de dados.</span>
   </li>
   <li>
    
     <i class="fa-li fa fa-bolt"></i>
-    <strong>Power Systems:</strong> Exploring modern challenges and technological innovations in energy distribution, smart grids, and grid optimization.
+    <strong>
+        <span class="en-content">Power Systems:</span>
+        <span class="pt-content">Sistemas de Potência:</span>
+    </strong> 
+    <span class="en-content">Exploring modern challenges and technological innovations in energy distribution, smart grids, and grid optimization.</span>
+    <span class="pt-content">Exploração de desafios modernos e inovações tecnológicas em distribuição de energia, redes inteligentes (smart grids) e otimização de rede.</span>
   </li>
 </ul></div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
         <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
+          <h2 class="mb-5">
+              <span class="en-content">Projects</span>
+              <span class="pt-content">Projetos</span>
+          </h2>
           <div class="row portfolio-grid">
-             <!-- ########################################### CARD 1 ##################################################################### -->
-     <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj1">
+             <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj1">
 
               <div class="card h-100">
                 <div class="card-img-wrapper">
@@ -298,8 +397,7 @@
                 </div>
               </div>
             </div>
-             <!-- ########################################### CARD 2 ##################################################################### -->
-                      <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj2">
+             <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj2">
               <div class="card h-100">
                 <div class="card-img-wrapper">
                   <img class="card-img-top" src="img/projeto2.png" alt="Assetz">
@@ -310,8 +408,7 @@
                 </div>
               </div>
             </div>
-    <!-- ########################################### CARD 3 ##################################################################### -->
-   <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj3">
+    <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj3">
 
               <div class="card h-100">
                 <div class="card-img-wrapper">
@@ -323,8 +420,7 @@
                 </div>
               </div>
             </div>
-    <!-- ########################################### CARD 4 ##################################################################### -->
-            <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj4">
+    <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj4">
 
               <div class="card h-100">
                 <div class="card-img-wrapper">
@@ -336,13 +432,11 @@
                 </div>
               </div>
             </div>
-    <!-- ########################################### CARD 5 ##################################################################### -->
-          </div>
+    </div>
         </div>
       </section>
 
-      <!-- ########################################### PROJETO 1 ##################################################################### -->
-<div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -360,48 +454,79 @@
           <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">iOS/Swift</span>
         </div>
 
-        <h4 class="mt-4">About the Project</h4>
+        <h4 class="mt-4">
+            <span class="en-content">About the Project</span>
+            <span class="pt-content">Sobre o Projeto</span>
+        </h4>
         <p>
-          Online tools for creating mobile applications, such as MIT App Inventor—widely used in technical schools — do not (as of this project's development in Oct/24) support Bluetooth on Apple devices like the iPhone. To address this issue, this project focuses on creating a native iOS application using Swift that controls all GPIOs of one or multiple ESP32s simultaneously via Bluetooth Low Energy and WiFi.
+          <span class="en-content">Online tools for creating mobile applications, such as MIT App Inventor—widely used in technical schools — do not (as of this project's development in Oct/24) support Bluetooth on Apple devices like the iPhone. To address this issue, this project focuses on creating a native iOS application using Swift that controls all GPIOs of one or multiple ESP32s simultaneously via Bluetooth Low Energy and WiFi.</span>
+          <span class="pt-content">Ferramentas online para criação de apps móveis, como o MIT App Inventor — amplamente utilizado em escolas técnicas — não suportam (até a data de desenvolvimento deste projeto em Out/24) Bluetooth em dispositivos Apple, como o iPhone. Para resolver este problema, este projeto foca na criação de um aplicativo iOS nativo usando Swift para controlar todas as GPIOs de um ou múltiplos ESP32s simultaneamente via Bluetooth Low Energy e WiFi.</span>
         </p>
 
-        <h4 class="mt-4">Features</h4>
+        <h4 class="mt-4">
+            <span class="en-content">Features</span>
+            <span class="pt-content">Funcionalidades</span>
+        </h4>
         <ul>
-          <li>The application requires iOS 17 (or higher).</li>
-          <li>The control cards are pre-defined for the most common peripherals in educational electronics and robotics. <strong>Therefore, this application can be used for various purposes, such as controlling motors, general home appliances, teaching robotics, home automation, etc.</strong></li>
-          <li>Inside the app, there is a section with the complete firmware to be uploaded to the ESP32 using the Arduino IDE, the pinout for the 30-pin ESP32, a serial monitor, and tutorials for basic electronics projects.</li>
-          <li>The app is rich in control features: analog, digital, and PWM. It was designed to support robotics education and independent home automation. As of Sep/2025, no application with as many features is available for download on any platform.</li>
+          <li>
+              <span class="en-content">The application requires iOS 17 (or higher).</span>
+              <span class="pt-content">O aplicativo requer iOS 17 (ou superior).</span>
+          </li>
+          <li>
+              <span class="en-content">The control cards are pre-defined for the most common peripherals in educational electronics and robotics. <strong>Therefore, this application can be used for various purposes, such as controlling motors, general home appliances, teaching robotics, home automation, etc.</strong></span>
+              <span class="pt-content">Os cartões de controle são pré-definidos para os periféricos mais comuns em eletrônica educacional e robótica. <strong>Portanto, este aplicativo pode ser usado para diversos fins, como controlar motores, eletrodomésticos gerais, ensino de robótica, automação residencial, etc.</strong></span>
+          </li>
+          <li>
+              <span class="en-content">Inside the app, there is a section with the complete firmware to be uploaded to the ESP32 using the Arduino IDE, the pinout for the 30-pin ESP32, a serial monitor, and tutorials for basic electronics projects.</span>
+              <span class="pt-content">Dentro do app, há uma seção com o firmware completo para ser carregado no ESP32 usando a IDE Arduino, o pinout para o ESP32 de 30 pinos, um monitor serial e tutoriais para projetos básicos de eletrônica.</span>
+          </li>
+          <li>
+              <span class="en-content">The app is rich in control features: analog, digital, and PWM. It was designed to support robotics education and independent home automation. As of Sep/2025, no application with as many features is available for download on any platform.</span>
+              <span class="pt-content">O app é rico em recursos de controle: analógico, digital e PWM. Foi projetado para apoiar o ensino de robótica e automação residencial independente. Até Set/2025, nenhum aplicativo com tantos recursos está disponível para download em qualquer plataforma.</span>
+          </li>
         </ul>
 
-        <h4 class="mt-4">The App</h4>
-        <p><strong>Initial presentation with a brief tutorial on the app's features.</strong></p>
+        <h4 class="mt-4">
+            <span class="en-content">The App</span>
+            <span class="pt-content">O App</span>
+        </h4>
+        <p><strong>
+            <span class="en-content">Initial presentation with a brief tutorial on the app's features.</span>
+            <span class="pt-content">Apresentação inicial com um breve tutorial das funcionalidades do app.</span>
+        </strong></p>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <img src="img/image0.png" class="img-fluid rounded">
+            <img src="img/image0.PNG" class="img-fluid rounded">
           </div>
           <div class="col-md-4 mb-3">
-            <img src="img/image1.png" class="img-fluid rounded">
+            <img src="img/image1.PNG" class="img-fluid rounded">
           </div>
           <div class="col-md-4 mb-3">
-            <img src="img/image2.png" class="img-fluid rounded">
+            <img src="img/image2.PNG" class="img-fluid rounded">
           </div>
         </div>
         
-        <p><strong>Connection screen. Available ESP32 microcontrollers will be listed here for connection via both Bluetooth and WiFi. It is possible to control the same ESP32 with both connections simultaneously.</strong></p>
+        <p><strong>
+            <span class="en-content">Connection screen. Available ESP32 microcontrollers will be listed here for connection via both Bluetooth and WiFi. It is possible to control the same ESP32 with both connections simultaneously.</span>
+            <span class="pt-content">Tela de conexão. Microcontroladores ESP32 disponíveis serão listados aqui para conexão via Bluetooth e WiFi. É possível controlar o mesmo ESP32 com ambas as conexões simultaneamente.</span>
+        </strong></p>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <img src="img/image3.png" class="img-fluid rounded">
+            <img src="img/image3.PNG" class="img-fluid rounded">
           </div>
           <div class="col-md-4 mb-3">
-            <img src="img/image4.png" class="img-fluid rounded">
+            <img src="img/image4.PNG" class="img-fluid rounded">
           </div>
           <div class="col-md-4 mb-3">
-            <img src="img/image5.png" class="img-fluid rounded">
+            <img src="img/image5.PNG" class="img-fluid rounded">
           </div>
         </div>
         
         <div class="text-right mt-4">
-          <a class="btn btn-primary" href="#" target="_blank">Live Demo</a>
+          <a class="btn btn-primary" href="#" target="_blank">
+              <span class="en-content">Live Demo</span>
+              <span class="pt-content">Demo ao Vivo</span>
+          </a>
           <a class="btn btn-outline-secondary" href="#" target="_blank">Github</a>
         </div>
       </div>
@@ -409,8 +534,7 @@
   </div>
 </div>
  
-    <!-- ########################################### PROJETO 2 ##################################################################### -->
-<div class="modal fade" id="modalProj2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modalProj2" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -429,26 +553,50 @@
           
         </div>
 
-        <h4 class="mt-4">About the Project</h4>
-        <p>Online application that, using advanced analysis algorithms and Artificial Intelligence, predicts the price of any asset on the Brazilian stock exchange using its history.</p>
+        <h4 class="mt-4">
+            <span class="en-content">About the Project</span>
+            <span class="pt-content">Sobre o Projeto</span>
+        </h4>
+        <p>
+            <span class="en-content">Online application that, using advanced analysis algorithms and Artificial Intelligence, predicts the price of any asset on the Brazilian stock exchange using its history.</span>
+            <span class="pt-content">Aplicação online que, utilizando algoritmos de análise avançada e Inteligência Artificial, prevê o preço de qualquer ativo da bolsa de valores brasileira utilizando seu histórico.</span>
+        </p>
 
-        <h4 class="mt-4">Features</h4>
+        <h4 class="mt-4">
+            <span class="en-content">Features</span>
+            <span class="pt-content">Funcionalidades</span>
+        </h4>
         <ul>
-          <li>The application is accessed via web page</li>
-          <li>You can choose from the sidebar any asset listed on the Stock Exchange.</li>
+          <li>
+              <span class="en-content">The application is accessed via web page</span>
+              <span class="pt-content">A aplicação é acessada via página web</span>
+          </li>
+          <li>
+              <span class="en-content">You can choose from the sidebar any asset listed on the Stock Exchange.</span>
+              <span class="pt-content">Você pode escolher na barra lateral qualquer ativo listado na Bolsa de Valores.</span>
+          </li>
           
         </ul>
         
         
-        <h4 class="mt-4">Web application</h4>
-        <p>App home screen</p>
+        <h4 class="mt-4">
+            <span class="en-content">Web application</span>
+            <span class="pt-content">Aplicação Web</span>
+        </h4>
+        <p>
+            <span class="en-content">App home screen</span>
+            <span class="pt-content">Tela inicial do App</span>
+        </p>
                 
         
         <div class="row">
           
           <div class="col-md-12 mb-6">
             <img src="img/assetz1.png" class="img-fluid rounded" alt="">
-            <p class="text-muted text-center mt-2"><small>The web app's home screen starts with the MGLU3 asset, and can be changed in the left sidebar to any asset listed on the Stock Exchange.</small></p>
+            <p class="text-muted text-center mt-2"><small>
+                <span class="en-content">The web app's home screen starts with the MGLU3 asset, and can be changed in the left sidebar to any asset listed on the Stock Exchange.</span>
+                <span class="pt-content">A tela inicial do web app começa com o ativo MGLU3, podendo ser alterado na barra lateral esquerda para qualquer ativo listado na Bolsa.</span>
+            </small></p>
           </div>
         </div>
         
@@ -456,14 +604,16 @@
         
 
         <div class="text-right mt-4">
-          <a class="btn btn-primary" href="https://assetz.streamlit.app" target="_blank">Live Demo</a>
+          <a class="btn btn-primary" href="https://assetz.streamlit.app" target="_blank">
+              <span class="en-content">Live Demo</span>
+              <span class="pt-content">Demo ao Vivo</span>
+          </a>
           <a class="btn btn-outline-secondary" href="https://github.com/rodrig0c/analisador_ativos" target="_blank">Github</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- ########################################### PROJETO 3 ##################################################################### -->
 <div class="modal fade" id="modalProj3" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -483,35 +633,46 @@
           
         </div>
 
-        <h4 class="mt-4">About the Project</h4>
-        <p>Two-way messenger using LoRa technology and long-distance E-Byte E220-900T22D chip with 10dBi omnidirectional antennas.</p>
+        <h4 class="mt-4">
+            <span class="en-content">About the Project</span>
+            <span class="pt-content">Sobre o Projeto</span>
+        </h4>
+        <p>
+            <span class="en-content">Two-way messenger using LoRa technology and long-distance E-Byte E220-900T22D chip with 10dBi omnidirectional antennas.</span>
+            <span class="pt-content">Mensageiro bidirecional usando tecnologia LoRa e chip E-Byte E220-900T22D de longa distância com antenas omnidirecionais de 10dBi.</span>
+        </p>
 
-        <h4 class="mt-4">Features</h4>
+        <h4 class="mt-4">
+            <span class="en-content">Features</span>
+            <span class="pt-content">Funcionalidades</span>
+        </h4>
         <ul>
-          <li>The messenger sends and receives messages without WiFi connection and Mobile Data, only using radio waves in the frequency 868-915 MHz.</li>
+          <li>
+              <span class="en-content">The messenger sends and receives messages without WiFi connection and Mobile Data, only using radio waves in the frequency 868-915 MHz.</span>
+              <span class="pt-content">O mensageiro envia e recebe mensagens sem conexão WiFi e Dados Móveis, usando apenas ondas de rádio na frequência 868-915 MHz.</span>
+          </li>
           
         </ul>
         
         
-        <h4 class="mt-4">The Project</h4>
+        <h4 class="mt-4">
+            <span class="en-content">The Project</span>
+            <span class="pt-content">O Projeto</span>
+        </h4>
         <p></p>
                 
-        
-        
-        
-        
-
         <div class="text-right mt-4">
-          <a class="btn btn-primary" href="" target="_blank">Live Demo</a>
+          <a class="btn btn-primary" href="" target="_blank">
+              <span class="en-content">Live Demo</span>
+              <span class="pt-content">Demo ao Vivo</span>
+          </a>
           <a class="btn btn-outline-secondary" href="" target="_blank">Github</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-    <!-- ########################################### FIM PROJETO 3 ##################################################################### -->
-<!-- ########################################### PROJETO 4 ##################################################################### -->
-<div class="modal fade" id="modalProj4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modalProj4" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -532,19 +693,40 @@
           
         </div>
 
-        <h4 class="mt-4">About the Project</h4>
-        <p>Safety device for motorcyclists: in the event of a fall of the motorcyclist, Vindex detects the fall, sends an emergency message to favorite contacts called "Guardians" and with a camera attached takes a photo for visual proof of the accident, being able to recognize vehicle plates for proof of culpability.</p>
+        <h4 class="mt-4">
+            <span class="en-content">About the Project</span>
+            <span class="pt-content">Sobre o Projeto</span>
+        </h4>
+        <p>
+            <span class="en-content">Safety device for motorcyclists: in the event of a fall of the motorcyclist, Vindex detects the fall, sends an emergency message to favorite contacts called "Guardians" and with a camera attached takes a photo for visual proof of the accident, being able to recognize vehicle plates for proof of culpability.</span>
+            <span class="pt-content">Dispositivo de segurança para motociclistas: em caso de queda do motociclista, o Vindex detecta a queda, envia uma mensagem de emergência para contatos favoritos chamados "Guardiões" e com uma câmera acoplada tira uma foto para prova visual do acidente, sendo capaz de reconhecer placas de veículos para prova de culpabilidade.</span>
+        </p>
 
-        <h4 class="mt-4">Features</h4>
+        <h4 class="mt-4">
+            <span class="en-content">Features</span>
+            <span class="pt-content">Funcionalidades</span>
+        </h4>
         <ul>
-          <li>Continuous Monitoring</li>
-          <li>Proof of culpability in the event of a collision</li>
+          <li>
+              <span class="en-content">Continuous Monitoring</span>
+              <span class="pt-content">Monitoramento Contínuo</span>
+          </li>
+          <li>
+              <span class="en-content">Proof of culpability in the event of a collision</span>
+              <span class="pt-content">Prova de culpabilidade em caso de colisão</span>
+          </li>
           
         </ul>
         
         
-        <h4 class="mt-4">The app</h4>
-        <p>In case of an accident, the app sends an automatic message to the Guardian without any intervention from the driver</p>
+        <h4 class="mt-4">
+            <span class="en-content">The app</span>
+            <span class="pt-content">O App</span>
+        </h4>
+        <p>
+            <span class="en-content">In case of an accident, the app sends an automatic message to the Guardian without any intervention from the driver</span>
+            <span class="pt-content">Em caso de acidente, o app envia uma mensagem automática ao Guardião sem qualquer intervenção do condutor</span>
+        </p>
                 
         
         <div class="row">
@@ -556,7 +738,10 @@
         
           <div class="col-md-4 mb-3">
             <img src="img/vindex2.png" class="img-fluid rounded" alt="Home screen">
-            <p class="text-muted text-center mt-2"><small>Home screen where we can see Vindex status and actual location</small></p>
+            <p class="text-muted text-center mt-2"><small>
+                <span class="en-content">Home screen where we can see Vindex status and actual location</span>
+                <span class="pt-content">Tela inicial onde podemos ver o status do Vindex e a localização atual</span>
+            </small></p>
           </div>
         </div>
         
@@ -564,7 +749,10 @@
         
 
         <div class="text-right mt-4">
-          <a class="btn btn-primary" href="" target="_blank">Live Demo</a>
+          <a class="btn btn-primary" href="" target="_blank">
+              <span class="en-content">Live Demo</span>
+              <span class="pt-content">Demo ao Vivo</span>
+          </a>
           <a class="btn btn-outline-secondary" href="" target="_blank">Github</a>
         </div>
       </div>
@@ -572,36 +760,70 @@
   </div>
 </div>
 
-<!-- ########################################### FIM PROJETO 4 ##################################################################### -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/resume.min.js"></script>
+
+    <script>
+    // === LÓGICA DE TROCA DE IDIOMA ===
+    document.addEventListener('DOMContentLoaded', function() {
+        const langBtns = document.querySelectorAll('.lang-btn');
+        const body = document.body;
+        
+        // 1. Verificar se já existe preferência salva
+        const savedLang = localStorage.getItem('portfolio-lang') || 'en';
+        setLanguage(savedLang);
+
+        // 2. Adicionar evento de clique nas bandeiras
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        // Função para aplicar o idioma
+        function setLanguage(lang) {
+            // Remove as classes antigas
+            body.classList.remove('lang-en', 'lang-pt');
+            
+            // Adiciona a nova classe ao body
+            body.classList.add('lang-' + lang);
+            
+            // Atualiza a opacidade das bandeiras (UI)
+            langBtns.forEach(btn => {
+                if(btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                    btn.style.opacity = '1';
+                    btn.style.filter = 'grayscale(0%)';
+                } else {
+                    btn.classList.remove('active');
+                    btn.style.opacity = '0.4';
+                    btn.style.filter = 'grayscale(100%)';
+                }
+            });
+
+            // Salva a preferência
+            localStorage.setItem('portfolio-lang', lang);
+        }
+
+        // === SEU SCRIPT ORIGINAL DE IMAGENS PEQUENAS ===
+        const cardImages = document.querySelectorAll('.portfolio-grid .card-img-top');
+        cardImages.forEach(img => {
+            img.addEventListener('load', function() {
+                const container = this.closest('.card-img-wrapper');
+                if (this.naturalWidth < 150 || this.naturalHeight < 100) {
+                    container.classList.add('has-small-image');
+                }
+            });
+            img.addEventListener('error', function() {
+                this.classList.add('error');
+                this.alt = 'Imagem não carregada';
+            });
+        });
+    });
+    </script>
   </body>
 
 </html>
-
-<script>
-// Detecta imagens muito pequenas e aplica classe especial
-document.addEventListener('DOMContentLoaded', function() {
-    const cardImages = document.querySelectorAll('.portfolio-grid .card-img-top');
-    
-    cardImages.forEach(img => {
-        img.addEventListener('load', function() {
-            const container = this.closest('.card-img-wrapper');
-            // Se a imagem for menor que 50% do container, considera pequena
-            if (this.naturalWidth < 150 || this.naturalHeight < 100) {
-                container.classList.add('has-small-image');
-            }
-        });
-        
-        // Tratamento de erro
-        img.addEventListener('error', function() {
-            this.classList.add('error');
-            this.alt = 'Imagem não carregada';
-        });
-    });
-});
-</script>
-
-
