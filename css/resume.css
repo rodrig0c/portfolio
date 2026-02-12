@@ -512,3 +512,55 @@ a {
         font-size: 1.25rem;
     }
 }
+/* =======================================================
+   CORREÇÃO DO GRID DO PORTFÓLIO (CSS Grid Layout)
+   Adicione isto ao final do arquivo css/resume.css
+   ======================================================= */
+
+/* Transforma o container .row em um Grid CSS real */
+.portfolio-grid {
+    display: grid !important;
+    gap: 30px; /* Substitui as margens manuais */
+    
+    /* Remove as margens negativas padrão do Bootstrap .row */
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Reseta as colunas do Bootstrap para funcionarem no Grid */
+.portfolio-grid .portfolio-item {
+    max-width: 100% !important;
+    flex: 0 0 auto !important; /* Desativa o flexbox do Bootstrap */
+    width: auto !important;
+    margin-bottom: 0 !important; /* O gap do grid cuida do espaçamento */
+    padding-left: 0 !important;  /* Remove padding lateral extra se necessário */
+    padding-right: 0 !important;
+}
+
+/* === REGRAS DE RESPONSIVIDADE (Baseadas nas suas classes originais) === */
+
+/* Mobile (Padrão) - 1 Coluna */
+.portfolio-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Tablet (col-md-6) - 2 Colunas */
+@media (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (col-lg-3) - 4 Colunas */
+@media (min-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop Grande (col-xl-2) - 6 Colunas */
+@media (min-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
