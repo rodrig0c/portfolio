@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,10 +41,11 @@
           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       }
       
-      /* Ajuste para mobile para não ficar em cima do menu hamburguer */
-      @media (max-width: 992px) {
+      /* Ajuste para mobile: não sobrepor ícones (LinkedIn/GitHub/CV) nem o botão do menu */
+      @media (max-width: 991.98px) {
           .language-switcher {
-              right: 70px; /* Joga para a esquerda do botão menu */
+              left: 70px;   /* fica ao lado do hamburguer */
+              right: auto;  /* evita brigar com os ícones à direita */
               top: 10px;
           }
       }
