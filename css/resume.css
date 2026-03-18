@@ -1,48 +1,47 @@
-/*!
- * Start Bootstrap - Resume v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2025 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96; }
+  color: #868e96;
+}
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem; } }
+    padding-left: 17rem;
+  }
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40; }
+  color: #343a40;
+}
 
 h1 {
   font-size: 6rem;
-  line-height: 5.5rem; }
+  line-height: 5.5rem;
+}
 
 h2 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+}
 
 h3 {
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 p.lead {
   font-size: 1.15rem;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'Saira Extra Condensed', serif;
-  font-size: 1.35rem; }
+  font-size: 1.35rem;
+}
 
 .social-icons a {
   display: inline-block;
@@ -54,40 +53,46 @@ p.lead {
   text-align: center;
   font-size: 1.5rem;
   line-height: 3.5rem;
-  margin-right: 1rem; }
-  .social-icons a:last-child {
-    margin-right: 0; }
-  .social-icons a:hover {
-    background-color: #748B6F; }
+  margin-right: 1rem;
+}
 
-/* Restored Social Icons for Sidebar */
-/* Social Icons for Sidebar */
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  background-color: #748B6F;
+}
+
 .list-social-icons {
   text-align: center;
-  padding-top: 1.5rem;
 }
 
 .list-social-icons .list-inline-item {
-  margin: 0 0.35rem;
+  margin: 0 .25rem;
 }
 
-.list-social-icons .fa-stack .fa-circle {
-  color: #495057; /* Cor de fundo escura para o círculo */
-  transition: all 0.2s ease-in-out;
+.list-social-icons .fa-stack {
+  color: #fff;
+  transition: all .2s;
 }
 
 .list-social-icons .fa-stack:hover .fa-circle {
-  color: #748B6F; /* Cor de destaque ao passar o mouse */
+  color: #748B6F;
 }
 
 .dev-icons {
-  font-size: 3rem; }
-  .dev-icons .list-inline-item i:hover {
-    color: #748B6F; }
+  font-size: 3rem;
+}
+
+.dev-icons .list-inline-item i:hover {
+  color: #748B6F;
+}
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 @media (min-width: 992px) {
   #sideNav {
@@ -98,63 +103,92 @@ p.lead {
     display: flex;
     flex-direction: column;
     width: 17rem;
-    height: 100vh; }
-    #sideNav .navbar-brand {
-      display: flex;
-      margin: auto auto 0;
-      padding: 0.5rem; }
-      #sideNav .navbar-brand .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
-        border: 0.5rem solid rgba(255, 255, 255, 0.2); }
-    #sideNav .navbar-collapse {
-      display: flex;
-      align-items: flex-start;
-      flex-grow: 0;
-      width: 100%;
-      margin-bottom: auto; }
-      #sideNav .navbar-collapse .navbar-nav {
-        flex-direction: column;
-        width: 100%; }
-        #sideNav .navbar-collapse .navbar-nav .nav-item {
-          display: block; }
-          #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-            display: block; } }
+    height: 100vh;
+  }
+
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: .5rem;
+  }
+
+  #sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: .5rem solid rgba(255, 255, 255, .2);
+  }
+
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+}
 
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
   padding-top: 5rem !important;
-  padding-bottom: 5rem !important; }
-  section.resume-section .resume-item .resume-date {
-    min-width: none; }
+  padding-bottom: 5rem !important;
+}
+
+section.resume-section .resume-item .resume-date {
+  min-width: none;
+}
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh; }
-    section.resume-section .resume-item .resume-date {
-      min-width: 18rem; } }
+    min-height: 100vh;
+  }
+
+  section.resume-section .resume-item .resume-date {
+    min-width: 18rem;
+  }
+}
 
 @media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
-    padding-bottom: 3rem !important; } }
+    padding-bottom: 3rem !important;
+  }
+}
 
 .bg-primary {
-  background-color: #748B6F !important; }
+  background-color: #748B6F !important;
+}
 
 .text-primary {
-  color: #748B6F !important; }
+  color: #748B6F !important;
+}
 
 a {
-  color: #748B6F; }
-  a:hover, a:focus, a:active {
-    color: #5b6b5b; }
+  color: #748B6F;
+}
 
-/* Your Custom Skills Grid */
+a:hover,
+a:focus,
+a:active {
+  color: #5b6b5b;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 1.5rem;
 }
 
@@ -163,38 +197,105 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 120px; /* Desktop width */
+  width: 80px;
 }
 
 .skill-item img {
-  width: 80px;  /* Desktop icon size */
-  height: 80px; /* Desktop icon size */
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .skill-item span {
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: #343a40;
 }
 
-/* Mobile Adjustments for Skills Grid */
 @media (max-width: 767px) {
   .skills-grid {
     gap: 1rem;
   }
+
   .skill-item {
-    width: 80px; /* Mobile width */
+    width: 80px;
   }
+
   .skill-item img {
-    width: 50px;  /* Mobile icon size */
-    height: 50px; /* Mobile icon size */
+    width: 45px;
+    height: 45px;
   }
+
   .skill-item span {
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
-}color: #5b6b5b; }
+}
+
+/* === FIX DEFINITIVO PARA ICONES SOCIAIS (COM HOVER DE ZOOM) === */
+#sideNav .list-social-icons {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+#sideNav .list-social-icons .fa-stack {
+    transition: transform 0.2s ease-in-out; /* Adiciona transição suave para o zoom */
+}
+#sideNav .list-social-icons .fa-stack .fa-circle {
+    color: #495057;
+}
+#sideNav .list-social-icons .fa-stack .fa-inverse {
+    color: #ffffff;
+}
+#sideNav .list-social-icons a:hover .fa-stack {
+    transform: scale(1.15); /* Aumenta o tamanho do ícone em 15% */
+}
+/* === AJUSTE FINAL NAVBAR MOBILE === */
+@media (max-width: 991.98px) {
+  #sideNav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #sideNav .navbar-brand {
+    display: none;
+  }
+}
+/* === LAYOUT FINAL DO CABEÇALHO MOBILE === */
+@media (max-width: 991.98px) {
+  .mobile-header-wrapper {
+    display: flex;
+    justify-content: space-between; /* Alinha o botão à esquerda e os ícones à direita */
+    align-items: center;
+    width: 100%;
+  }
+  /* Esconde os ícones de redes sociais originais (do menu desktop) */
+  #navbarSupportedContent .list-social-icons {
+    display: none;
+  }
+  /* Ajuste no tamanho e cor dos novos ícones mobile */
+  .mobile-header-wrapper .list-social-icons .fa-stack {
+    font-size: 0.95rem; /* Deixa os ícones um pouco menores */
+    transition: transform 0.2s ease-in-out;
+  }
+  .mobile-header-wrapper .list-social-icons .fa-circle {
+    color: #495057;
+  }
+  .mobile-header-wrapper .list-social-icons a:hover .fa-stack {
+    transform: scale(1);
+  }
+}
+@media (min-width: 992px) {
+  /* Esconde todo o wrapper do cabeçalho mobile no desktop */
+  .mobile-header-wrapper {
+    display: none;
+  }
+}
+/* === CORREÇÃO FINAL PARA DUPLICAÇÃO MOBILE === */
+@media (max-width: 991.98px) {
+  /* Esconde o bloco de ícones da barra lateral (desktop) quando estiver no mobile */
+  #sideNav .sidebar-icons {
+    display: none;
+  }
+}
 
 /* ====== PORTFOLIO CARDS COM DESIGN MODERNO ====== */
 .portfolio-grid .portfolio-item {
@@ -346,6 +447,8 @@ a {
         transform: translateY(0);
     }
 }
+
+
 
 /* ====== AJUSTES PARA O MODAL - CORES E TAGS ====== */
 .modal-body img.img-fluid.mb-3 {
@@ -512,55 +615,37 @@ a {
         font-size: 1.25rem;
     }
 }
-/* =======================================================
-   CORREÇÃO DO GRID DO PORTFÓLIO (CSS Grid Layout)
-   Adicione isto ao final do arquivo css/resume.css
-   ======================================================= */
 
-/* Transforma o container .row em um Grid CSS real */
-.portfolio-grid {
-    display: grid !important;
-    gap: 30px; /* Substitui as margens manuais */
-    
-    /* Remove as margens negativas padrão do Bootstrap .row */
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-}
 
-/* Reseta as colunas do Bootstrap para funcionarem no Grid */
-.portfolio-grid .portfolio-item {
-    max-width: 100% !important;
-    flex: 0 0 auto !important; /* Desativa o flexbox do Bootstrap */
-    width: auto !important;
-    margin-bottom: 0 !important; /* O gap do grid cuida do espaçamento */
-    padding-left: 0 !important;  /* Remove padding lateral extra se necessário */
-    padding-right: 0 !important;
-}
-
-/* === REGRAS DE RESPONSIVIDADE (Baseadas nas suas classes originais) === */
-
-/* Mobile (Padrão) - 1 Coluna */
-.portfolio-grid {
-    grid-template-columns: 1fr;
-}
-
-/* Tablet (col-md-6) - 2 Colunas */
-@media (min-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Desktop (col-lg-3) - 4 Colunas */
-@media (min-width: 992px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Desktop Grande (col-xl-2) - 6 Colunas */
-@media (min-width: 1200px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
+/* ===== PROFESSIONAL POSITIONING IMPROVEMENTS ===== */
+.about-summary{max-width:880px;color:#495057;line-height:1.75}
+.hero-tags{display:flex;flex-wrap:wrap;gap:.65rem;max-width:860px}
+.hero-tag{display:inline-flex;align-items:center;padding:.45rem .85rem;border-radius:999px;background:#f1f4ef;color:#4d5f49;font-size:.9rem;font-weight:600;border:1px solid rgba(116,139,111,.18)}
+.hero-actions .btn{border-radius:8px;padding:.8rem 1.4rem;font-weight:600}
+.section-intro{max-width:860px;color:#5c6670;line-height:1.7}
+.skills-grid{justify-content:flex-start}
+.skill-item{width:120px}
+.skill-item img{width:58px;height:58px;margin-bottom:.65rem}
+.skill-item figcaption{font-size:.82rem;font-weight:600;color:#343a40;line-height:1.25}
+.skill-item-text{justify-content:center;width:auto;min-width:110px;padding:.85rem 1rem;border-radius:12px;background:#f8f9fa;border:1px solid #e9ecef}
+.skill-item-text figcaption{margin:0}
+.skill-note{max-width:860px;background:#f8f9fa;border-left:4px solid #748B6F;padding:1rem 1.1rem;border-radius:8px;color:#495057}
+.experience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.experience-card{background:#fff;border:1px solid #e8ecef;border-radius:14px;padding:1.25rem 1.2rem;box-shadow:0 6px 18px rgba(0,0,0,.05);height:100%}
+.experience-card h3{font-size:1.45rem;margin-bottom:.25rem}
+.experience-card ul{padding-left:1.1rem;margin-bottom:0}
+.experience-card li{margin-bottom:.6rem;color:#495057;line-height:1.55}
+.experience-header{margin-bottom:.85rem}
+.experience-tag{display:inline-block;font-size:.82rem;font-weight:700;color:#748B6F;background:#f1f4ef;border-radius:999px;padding:.35rem .7rem}
+.portfolio-grid .card-body{height:140px}
+.portfolio-grid .card-text{font-weight:600;-webkit-line-clamp:3}
+.modal-body .btn:empty,.modal-body .btn[href=""],.modal-body .btn[href="#"]{opacity:.75}
+@media (max-width:767px){
+  h1{font-size:4rem;line-height:3.9rem}
+  .hero-tags{gap:.5rem}
+  .hero-tag{font-size:.78rem;padding:.38rem .72rem}
+  .skill-item{width:94px}
+  .skill-item img{width:48px;height:48px}
+  .skill-item figcaption{font-size:.76rem}
+  .skill-item-text{min-width:96px;padding:.7rem .7rem}
 }
