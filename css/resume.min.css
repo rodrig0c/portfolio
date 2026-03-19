@@ -142,11 +142,12 @@ p.lead {
 
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
-  padding-top: 2rem !important;
+  padding-top: 5rem !important;
   padding-bottom: 5rem !important;
 }
 
 section.resume-section .resume-item .resume-date {
+   padding-top: 2rem !important;
   min-width: none;
 }
 
