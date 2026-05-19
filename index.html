@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,920 +10,874 @@
     <title>Portfolio - Rodrigo</title>
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
     <link href="css/resume.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-      /* Estilos do Portfolio (Mantidos) */
-      .portfolio-grid .portfolio-item{cursor:pointer;margin-bottom:30px}
-      .portfolio-grid .card{border:none;box-shadow:0 2px 6px rgba(0,0,0,.12);transition:all .3s ease;overflow:hidden}
-      .portfolio-grid .card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
-      .portfolio-grid .card-img-wrapper{overflow:hidden}
-      .portfolio-grid .card-img-top{transition:transform .5s ease}
-      .portfolio-grid .card:hover .card-img-top{transform:scale(1.08)}
-      .portfolio-grid .card-title{color:#748B6F}
+        /* ========== ESTILOS DO PORTFOLIO ========== */
+        .portfolio-grid .portfolio-item {
+            cursor: pointer;
+            margin-bottom: 30px
+        }
+        .portfolio-grid .card {
+            border: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,.12);
+            transition: all .3s ease;
+            overflow: hidden
+        }
+        .portfolio-grid .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.15)
+        }
+        .portfolio-grid .card-img-wrapper {
+            overflow: hidden
+        }
+        .portfolio-grid .card-img-top {
+            transition: transform .5s ease
+        }
+        .portfolio-grid .card:hover .card-img-top {
+            transform: scale(1.08)
+        }
+        .portfolio-grid .card-title {
+            color: #748B6F
+        }
 
-      /* === NOVO: SELETOR DE IDIOMAS === */
-      .language-switcher {
-          position: fixed;
-          top: 15px;
-          right: 20px;
-          z-index: 9999;
-          background: rgba(255, 255, 255, 0.8);
-          padding: 5px 10px;
-          border-radius: 20px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      }
-      
-      /* Ajuste para mobile: não sobrepor ícones (LinkedIn/GitHub/CV) nem o botão do menu */
-      @media (max-width: 991.98px) {
-          .language-switcher {
-              left: 90px;   /* fica ao lado do hamburguer */
-              right: auto;  /* evita brigar com os ícones à direita */
-              top: 20px;
-          }
-      }
+        /* ========== SELETOR DE IDIOMAS ========== */
+        .language-switcher {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 991.98px) {
+            .language-switcher {
+                left: 90px;
+                right: auto;
+                top: 20px;
+            }
+        }
 
-      .lang-btn {
-          cursor: pointer;
-          width: 32px;
-          height: auto;
-          margin: 0 4px;
-          opacity: 0.4;
-          transition: all 0.3s;
-          filter: grayscale(80%);
-      }
+        .lang-btn {
+            cursor: pointer;
+            width: 32px;
+            height: auto;
+            margin: 0 4px;
+            opacity: 0.4;
+            transition: all 0.3s;
+            filter: grayscale(80%);
+        }
 
-      .lang-btn:hover, .lang-btn.active {
-          opacity: 1;
-          filter: grayscale(0%);
-          transform: scale(1.1);
-      }
+        .lang-btn:hover, .lang-btn.active {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
 
-      /* Lógica de Ocultação */
-      /* Se o body tem a classe 'lang-en', esconde português */
-      body.lang-en .pt-content { display: none !important; }
-      
-      /* Se o body tem a classe 'lang-pt', esconde inglês */
-      body.lang-pt .en-content { display: none !important; }
+        /* ========== LÓGICA DE OCULTAÇÃO DE IDIOMAS ========== */
+        body.lang-en .pt-content { display: none !important; }
+        body.lang-pt .en-content { display: none !important; }
     </style>
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ once: true, duration: 600 });</script>
+    <script>
+        AOS.init({ once: true, duration: 600 });
+    </script>
+    
+    <!-- Microsoft Clarity -->
     <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w409hg8pn3");
-</script>
-  </head>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w409hg8pn3");
+    </script>
+</head>
 
-  <body id="page-top" class="lang-en">
+<body id="page-top" class="lang-en">
 
+    <!-- ========== SELETOR DE IDIOMAS (BANDEIRAS) ========== -->
     <div class="language-switcher">
         <img src="https://flagcdn.com/w40/br.png" class="lang-btn" data-lang="pt" alt="Português" title="Português">
         <img src="https://flagcdn.com/w40/us.png" class="lang-btn" data-lang="en" alt="English" title="English">
     </div>
 
+    <!-- ========== NAVEGAÇÃO (SIDEBAR) ========== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Foto Rodrigo">
-        </span>
-      </a>
-     <div class="mobile-header-wrapper">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <ul class="list-inline list-social-icons mb-0">
-    <li class="list-inline-item">
-      <a href="https://www.linkedin.com/in/rodrig0c" target="_blank">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://github.com/rodrig0c" target="_blank">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="/docs/cv.pdf" target="_blank" rel="noopener noreferrer">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-  </ul>
-</div>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">
-                <span class="en-content">About</span><span class="pt-content">Sobre</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">
-                <span class="en-content">Education</span><span class="pt-content">Educação</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">
-                <span class="en-content">Skills</span><span class="pt-content">Habilidades</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">
-                <span class="en-content">Areas Of Interest</span><span class="pt-content">Áreas de Interesse</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">
-                <span class="en-content">Projects</span><span class="pt-content">Projetos</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sidebar-icons mt-4">
-       <ul class="list-inline list-social-icons mb-0">
-        <li class="list-inline-item">
-          <a href="https://www.linkedin.com/in/rodrig0c" target="_blank">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Foto Rodrigo">
             </span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://github.com/rodrig0c" target="_blank">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-         <a href="/docs/cv.pdf" target="_blank" rel="noopener noreferrer">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      </ul>
-      </div>
-      </nav>
+        </a>
 
+        <div class="mobile-header-wrapper">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Ícones mobile (LinkedIn, GitHub, CV) -->
+            <ul class="list-inline list-social-icons mb-0">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/rodrig0c" target="_blank">
+                        <span class="fa-stack">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/rodrig0c" target="_blank">
+                        <span class="fa-stack">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="/docs/cv.pdf" target="_blank" rel="noopener noreferrer">
+                        <span class="fa-stack">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">
+                        <span class="en-content">About</span><span class="pt-content">Sobre</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">
+                        <span class="en-content">Education</span><span class="pt-content">Educação</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">
+                        <span class="en-content">Skills</span><span class="pt-content">Habilidades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#interests">
+                        <span class="en-content">Areas Of Interest</span><span class="pt-content">Áreas de Interesse</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">
+                        <span class="en-content">Projects</span><span class="pt-content">Projetos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Ícones sidebar desktop -->
+        <div class="sidebar-icons mt-4">
+            <ul class="list-inline list-social-icons mb-0">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/rodrig0c" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/rodrig0c" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="/docs/cv.pdf" target="_blank" rel="noopener noreferrer">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
     <div class="container-fluid p-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">Rodrigo <span class="text-primary">Costa de Araujo</span></h1>
-          <div class="subheading mb-5">São Paulo - Brazil
-            <a href="mailto:rodrigocosta@usp.br">rodrigocosta@usp.br</a>
-          </div>
-          <p class="mb-5">
-            <span class="en-content">Electrical Engineering student at Poli-USP, with an emphasis on Electronic and Computer Systems, focused on hardware-software integration, automation, applied data analysis, and solutions for operational efficiency. I develop projects that combine electronics, firmware, applications, and data processing in engineering and process automation contexts.</span>
-            <span class="pt-content">Estudante de Engenharia Elétrica na Poli-USP, ênfase em Eletrônica e Sistemas Computacionais, com foco em integração hardware-software, automação, análise de dados aplicada e soluções para eficiência operacional. Desenvolvo projetos que conectam eletrônica, firmware, aplicativos e processamento de dados em aplicações de engenharia e automação de processos.</span>
-          </p>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">
-              <span class="en-content">Education</span>
-              <span class="pt-content">Educação</span>
-          </h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <div class="d-flex align-items-center mb-4">
-                <img src="img/usplogo2.jpg" alt="Logo Poli-USP" style="width: 75px; height: auto; margin-right: 20px;">
-                <div>
-                  <h3 class="mb-0">Escola Politécnica da USP</h3>
-                  <div class="subheading mb-1">
-                      <span class="en-content">Bachelor of Electrical Engineer with emphasis on Electronic and Computer Systems</span>
-                      <span class="pt-content">Engenharia Elétrica com ênfase em Eletrônica e Sistemas Computacionais</span>
-                  </div>
-                   <div class="resume-date text-md-left mt-0 pt-0">
-                       <span class="text-primary">
-                           <span class="en-content">Graduation on July/27</span>
-                           <span class="pt-content">Formatura em Julho/27</span>
-                       </span>
-                   </div>
+        <!-- ==================== SEÇÃO: ABOUT / SOBRE ==================== -->
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <div class="my-auto">
+                <h1 class="mb-0">Rodrigo <span class="text-primary">Costa de Araujo</span></h1>
+                <div class="subheading mb-5">São Paulo - Brazil
+                    <a href="mailto:rodrigocosta@usp.br">rodrigocosta@usp.br</a>
                 </div>
-              </div>
-              <div class="d-flex align-items-center">
-                <img src="img/senai.png" alt="Logo SENAI" style="width: 75px; height: auto; margin-right: 20px;">
-                <div>
-                  <h3 class="mb-0">SENAI Roberto Simonsen</h3>
-                  <div class="subheading mb-0">
-                      <span class="en-content">Electronic Technician</span>
-                      <span class="pt-content">Técnico em Eletrônica</span>
-                  </div>
-                </div>
-              </div>
+                <p class="mb-5">
+                    <span class="en-content">Electrical Engineering student at Poli-USP, with an emphasis on Electronic and Computer Systems, focused on hardware-software integration, automation, applied data analysis, and solutions for operational efficiency. I develop projects that combine electronics, firmware, applications, and data processing in engineering and process automation contexts.</span>
+                    <span class="pt-content">Estudante de Engenharia Elétrica na Poli-USP, ênfase em Eletrônica e Sistemas Computacionais, com foco em integração hardware-software, automação, análise de dados aplicada e soluções para eficiência operacional. Desenvolvo projetos que conectam eletrônica, firmware, aplicativos e processamento de dados em aplicações de engenharia e automação de processos.</span>
+                </p>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">
-              <span class="en-content">Skills</span>
-              <span class="pt-content">Habilidades</span>
-          </h2>
-          
-          <div class="subheading mb-4">
-              <span class="en-content">Software and tools</span>
-              <span class="pt-content">Software e ferramentas</span>
-          </div>
-          <div class="skills-grid">
-            <figure class="skill-item">
-              <img src="img/cpp.png" alt="C++">
-              <figcaption>C/C++</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/python.png" alt="Python">
-              <figcaption>Python</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/powerbi.png" alt="Power BI">
-              <figcaption>Power BI</figcaption>
-            </figure>
-             
-            
-            <figure class="skill-item">
-              <img src="img/excel.png" alt="Excel">
-              <figcaption>Excel</figcaption>
-            </figure>
-            <figure class="skill-item">
-              <img src="img/autocadel.svg" alt="AutoCad">
-              <figcaption>AutoCad Electrical</figcaption>
-            </figure>
-            <figure class="skill-item">
-              <img src="img/sql.png" alt="SQL">
-              <figcaption>SQL</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/kicad.png" alt="KiCad">
-              <figcaption>KiCad PCB Design</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/opencv.png" alt="OpenCV">
-              <figcaption>Computer Vision (OpenCV)</figcaption>
-            </figure>
-
-             <figure class="skill-item">
-              <img src="img/machine.png" alt="Machine Learning">
-              <figcaption>Machine Learning</figcaption>
-            </figure>
-
-            <figure class="skill-item">
-              <img src="img/matlab.png" alt="MATLAB">
-              <figcaption>MATLAB</figcaption>
-            </figure>
-
-            <figure class="skill-item">
-              <img src="img/aws.png" alt="AWS">
-              <figcaption>AWS Cloud</figcaption>
-            </figure>
-          </div>
-          
-          
-          <div class="subheading mb-4">Hardware</div>
-          
-          <div class="skills-grid">   <figure class="skill-item">
-              <img src="img/rpi.png" alt="Raspberry Pi">
-              <figcaption>Raspberry Pi</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/esp32.png" alt="ESP32">
-              <figcaption>ESP32</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/arduino.png" alt="Arduino">
-              <figcaption>Arduino</figcaption>
-            </figure>
-            
-            <figure class="skill-item">
-              <img src="img/stm32.png" alt="STM32">
-              <figcaption>STM32</figcaption>
-            </figure>
-
-             <figure class="skill-item">
-              <img src="img/fpga.png" alt="FPGA">
-              <figcaption>FPGA</figcaption>
-            </figure>
-            
-          </div>                      </section>
-      
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto interests-section">
-          <h2 class="mb-5">
-              <span class="en-content">Areas of Interest</span>
-              <span class="pt-content">Áreas de Interesse</span>
-          </h2>
-
-          <p class="interests-intro mb-4">
-            <span class="en-content">My professional interests are focused on areas that combine engineering, automation, applied data analysis, and process improvement. They reflect the direction in which I want to expand my technical background beyond embedded systems, while staying connected to practical problem-solving and operational efficiency.</span>
-            <span class="pt-content">Meus interesses profissionais estão concentrados em áreas que combinam engenharia, automação, análise de dados aplicada e melhoria de processos. Eles refletem a direção em que pretendo expandir minha base técnica além de sistemas embarcados, sem perder a conexão com resolução prática de problemas e eficiência operacional.</span>
-          </p>
-
-          <div class="interests-grid">
-
-            <div class="interest-card">
-              <div class="interest-card-header">
-                <div class="interest-icon-wrapper"><i class="fa fa-cogs" aria-hidden="true"></i></div>
-                <div>
-                  <h3 class="interest-title mb-0">
-                    <span class="en-content">Process Automation</span>
-                    <span class="pt-content">Automação de Processos</span>
-                  </h3>
+        <!-- ==================== SEÇÃO: EDUCATION / EDUCAÇÃO ==================== -->
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+            <div class="my-auto">
+                <h2 class="mb-5">
+                    <span class="en-content">Education</span>
+                    <span class="pt-content">Educação</span>
+                </h2>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/usplogo2.jpg" alt="Logo Poli-USP" style="width: 75px; height: auto; margin-right: 20px;">
+                            <div>
+                                <h3 class="mb-0">Escola Politécnica da USP</h3>
+                                <div class="subheading mb-1">
+                                    <span class="en-content">Bachelor of Electrical Engineer with emphasis on Electronic and Computer Systems</span>
+                                    <span class="pt-content">Engenharia Elétrica com ênfase em Eletrônica e Sistemas Computacionais</span>
+                                </div>
+                                <div class="resume-date text-md-left mt-0 pt-0">
+                                    <span class="text-primary">
+                                        <span class="en-content">Graduation on July/27</span>
+                                        <span class="pt-content">Formatura em Julho/27</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="img/senai.png" alt="Logo SENAI" style="width: 75px; height: auto; margin-right: 20px;">
+                            <div>
+                                <h3 class="mb-0">SENAI Roberto Simonsen</h3>
+                                <div class="subheading mb-0">
+                                    <span class="en-content">Electronic Technician</span>
+                                    <span class="pt-content">Técnico em Eletrônica</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <p class="interest-text mb-0">
-                <span class="en-content">Interest in solutions that reduce manual tasks, improve workflows, and increase operational efficiency through software, system integration, and control logic.</span>
-                <span class="pt-content">Interesse em soluções que reduzam tarefas manuais, melhorem fluxos de trabalho e aumentem a eficiência operacional por meio de software, integração de sistemas e lógica de controle.</span>
-              </p>
             </div>
+        </section>
 
-            <div class="interest-card">
-              <div class="interest-card-header">
-                <div class="interest-icon-wrapper"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
-                <div>
-                  <h3 class="interest-title mb-0">
-                    <span class="en-content">Applied Data Analysis</span>
-                    <span class="pt-content">Análise de Dados Aplicada</span>
-                  </h3>
-                </div>
-              </div>
-              <p class="interest-text mb-0">
-                <span class="en-content">Use of data for monitoring, decision support, pattern identification, and the development of indicators for engineering, operations, and technical performance.</span>
-                <span class="pt-content">Uso de dados para monitoramento, suporte à decisão, identificação de padrões e desenvolvimento de indicadores voltados a contextos de engenharia, operações e desempenho técnico.</span>
-              </p>
-            </div>
-
-            <div class="interest-card">
-              <div class="interest-card-header">
-                <div class="interest-icon-wrapper"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
-                <div>
-                  <h3 class="interest-title mb-0">
-                    <span class="en-content">AI Applied to Engineering</span>
-                    <span class="pt-content">IA Aplicada à Engenharia</span>
-                  </h3>
-                </div>
-              </div>
-              <p class="interest-text mb-0">
-                <span class="en-content">Application of artificial intelligence, machine learning, and intelligent automation to engineering problems, predictive analysis, and process optimization.</span>
-                <span class="pt-content">Aplicação de inteligência artificial, machine learning e automação inteligente em problemas de engenharia, análise preditiva e otimização de processos.</span>
-              </p>
-            </div>
-
-            <div class="interest-card">
-              <div class="interest-card-header">
-                <div class="interest-icon-wrapper"><i class="fa fa-plug" aria-hidden="true"></i></div>
-                <div>
-                  <h3 class="interest-title mb-0">
-                    <span class="en-content">Systems Integration</span>
-                    <span class="pt-content">Integração de Sistemas</span>
-                  </h3>
-                </div>
-              </div>
-              <p class="interest-text mb-0">
-                <span class="en-content">Connecting electronics, firmware, applications, APIs, and data processing to build practical, scalable, and performance-oriented solutions.</span>
-                <span class="pt-content">Conexão entre eletrônica, firmware, aplicativos, APIs e processamento de dados para criar soluções práticas, escaláveis e orientadas a desempenho.</span>
-              </p>
-            </div>
-
-            <div class="interest-card interest-card-wide">
-              <div class="interest-card-header">
-                <div class="interest-icon-wrapper"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
-                <div>
-                  <h3 class="interest-title mb-0">
-                    <span class="en-content">Operational Efficiency</span>
-                    <span class="pt-content">Eficiência Operacional</span>
-                  </h3>
-                </div>
-              </div>
-              <p class="interest-text mb-0">
-                <span class="en-content">Development of solutions focused on process improvement, productivity, reliability, and smarter resource usage in technical and corporate environments.</span>
-                <span class="pt-content">Desenvolvimento de soluções voltadas à melhoria de processos, produtividade, confiabilidade e uso mais inteligente de recursos em ambientes técnicos e corporativos.</span>
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-        <div class="my-auto">
-          <h2 class="mb-5">
-              <span class="en-content">Projects <span class="text-muted" style="font-size: 1.2rem; text-transform: none; font-family: 'Open Sans', sans-serif; font-weight: 400; vertical-align: middle; margin-left: 10px;">(under construction)</span></span>
-              <span class="pt-content">Projetos <span class="text-muted" style="font-size: 1.2rem; text-transform: none; font-family: 'Open Sans', sans-serif; font-weight: 400; vertical-align: middle; margin-left: 10px;">(em construção)</span></span>
-          </h2>
-          <div class="row portfolio-grid">
-<div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj5">
-
-              <div class="card h-100">
-                <div class="card-img-wrapper">
-                  <img class="card-img-top" src="img/projeto5.png" alt="RTOS">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                      <span class="en-content">IoT Monitoring with ESP32, RTOS and Power BI</span>
-                      <span class="pt-content">Monitoramento IoT com ESP32, RTOS e Power BI</span>
-                  </h5>
-                  <p class="card-text">ESP32, RTOS, AWS, MQTT</p>
-                </div>
-              </div>
-            </div>
-<div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj1">
-
-              <div class="card h-100">
-                <div class="card-img-wrapper">
-                  <img class="card-img-top" src="img/projeto1.png" alt="Aplicativo iOS para ESP32">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                      <span class="en-content">ESP32 Connect</span>
-                      <span class="pt-content">ESP32 Connect</span>
-                  </h5>
-                  <p class="card-text">ESP32, Bluetooth, iOS/Swift</p>
-                </div>
-              </div>
-            </div>
-<div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj2">
-              <div class="card h-100">
-                <div class="card-img-wrapper">
-                  <img class="card-img-top" src="img/projeto2.png" alt="Assetz">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                      <span class="en-content">Lyapunov Adaptative Control</span>
-                      <span class="pt-content">Controle Adaptativo por Lyapunov</span>
-                  </h5>
-                  <p class="card-text">Arduino, MATLAB, C/C++</p>
-                </div>
-              </div>
-            </div>
-  <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj3">
-
-              <div class="card h-100">
-                <div class="card-img-wrapper">
-                  <img class="card-img-top" src="img/projeto3.png" alt="LoRa">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                      <span class="en-content">LoRa Messenger</span>
-                      <span class="pt-content">Mensageiro LoRa</span>
-                  </h5>
-                  <p class="card-text">C/C++, ESP32, LoRa</p>
-                </div>
-              </div>
-            </div>
- <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj4">
-
-              <div class="card h-100">
-                <div class="card-img-wrapper">
-                  <img class="card-img-top" src="img/projeto4.png" alt="Vindex">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                      <span class="en-content">Vindex</span>
-                      <span class="pt-content">Vindex</span>
-                  </h5>
-                  <p class="card-text">C/C++, ESP32, Raspberry Pi</p>
-                </div>
-              </div>
-            </div>
-    </div>
-        </div>
-
-      </section>
-
-<div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">
-            <span class="en-content">iOS App ESP32 Connect</span>
-            <span class="pt-content">App iOS ESP32 Connect</span>
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img class="img-fluid mb-3" src="img/projeto1.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
-        
-        <div class="text-center my-3">
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Bluetooth</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">iOS/Swift</span>
-        </div>
-
-        <h4 class="mt-4">
-            <span class="en-content">About the Project</span>
-            <span class="pt-content">Sobre o Projeto</span>
-        </h4>
-        <p>
-          <span class="en-content">Online tools for creating mobile applications, such as MIT App Inventor—widely used in technical schools — do not (as of this project's development in Oct/24) support Bluetooth on Apple devices like the iPhone. To address this issue, this project focuses on creating a native iOS application using Swift that controls all GPIOs of one or multiple ESP32s simultaneously via Bluetooth Low Energy and WiFi.</span>
-          <span class="pt-content">Ferramentas online para criação de apps móveis, como o MIT App Inventor — amplamente utilizado em escolas técnicas — não suportam (até a data de desenvolvimento deste projeto em Out/24) Bluetooth em dispositivos Apple, como o iPhone. Para resolver este problema, este projeto foca na criação de um aplicativo iOS nativo usando Swift para controlar todas as GPIOs de um ou múltiplos ESP32s simultaneamente via Bluetooth Low Energy e WiFi.</span>
-        </p>
-
-        <h4 class="mt-4">
-            <span class="en-content">Features</span>
-            <span class="pt-content">Funcionalidades</span>
-        </h4>
-        <ul>
-          <li>
-              <span class="en-content">The application requires iOS 17 (or higher).</span>
-              <span class="pt-content">O aplicativo requer iOS 17 (ou superior).</span>
-          </li>
-          <li>
-              <span class="en-content">The control cards are pre-defined for the most common peripherals in educational electronics and robotics. <strong>Therefore, this application can be used for various purposes, such as controlling motors, general home appliances, teaching robotics, home automation, etc.</strong></span>
-              <span class="pt-content">Os cartões de controle são pré-definidos para os periféricos mais comuns em eletrônica educacional e robótica. <strong>Portanto, este aplicativo pode ser usado para diversos fins, como controlar motores, eletrodomésticos gerais, ensino de robótica, automação residencial, etc.</strong></span>
-          </li>
-          <li>
-              <span class="en-content">Inside the app, there is a section with the complete firmware to be uploaded to the ESP32 using the Arduino IDE, the pinout for the 30-pin ESP32, a serial monitor, and tutorials for basic electronics projects.</span>
-              <span class="pt-content">Dentro do app, há uma seção com o firmware completo para ser carregado no ESP32 usando a IDE Arduino, o pinout para o ESP32 de 30 pinos, um monitor serial e tutoriais para projetos básicos de eletrônica.</span>
-          </li>
-          <li>
-              <span class="en-content">The app is rich in control features: analog, digital, and PWM. It was designed to support robotics education and independent home automation. As of Sep/2025, no application with as many features is available for download on any platform.</span>
-              <span class="pt-content">O app é rico em recursos de controle: analógico, digital e PWM. Foi projetado para apoiar o ensino de robótica e automação residencial independente. Até Set/2025, nenhum aplicativo com tantos recursos está disponível para download em qualquer plataforma.</span>
-          </li>
-        </ul>
-
-        <h4 class="mt-4">
-            <span class="en-content">The App</span>
-            <span class="pt-content">O App</span>
-        </h4>
-        <p><strong>
-            <span class="en-content">Initial presentation with a brief tutorial on the app's features.</span>
-            <span class="pt-content">Apresentação inicial com um breve tutorial das funcionalidades do app.</span>
-        </strong></p>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <img src="img/image0.PNG" class="img-fluid rounded">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="img/image1.PNG" class="img-fluid rounded">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="img/image2.PNG" class="img-fluid rounded">
-          </div>
-        </div>
-        
-        <p><strong>
-            <span class="en-content">Connection screen. Available ESP32 microcontrollers will be listed here for connection via both Bluetooth and WiFi. It is possible to control the same ESP32 with both connections simultaneously.</span>
-            <span class="pt-content">Tela de conexão. Microcontroladores ESP32 disponíveis serão listados aqui para conexão via Bluetooth e WiFi. É possível controlar o mesmo ESP32 com ambas as conexões simultaneamente.</span>
-        </strong></p>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <img src="img/image3.PNG" class="img-fluid rounded">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="img/image4.PNG" class="img-fluid rounded">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="img/image5.PNG" class="img-fluid rounded">
-          </div>
-        </div>
-        
-        <div class="text-right mt-4">
-          <a class="btn btn-primary" href="#" target="_blank">
-              <span class="en-content">Live Demo</span>
-              <span class="pt-content">Demo ao Vivo</span>
-          </a>
-        <a class="btn btn-outline-secondary" href="/docs/esp32.pdf" target="_blank" rel="noopener noreferrer">
-    <i class="fa fa-file-pdf-o" aria-hidden="true" style="margin-right: 5px;"></i>
-    <span class="en-content">Case Study</span>
-    <span class="pt-content">Estudo de Caso</span>
-</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modalProj3" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">
-            <span class="en-content">LoRa Messenger</span>
-            <span class="pt-content">Mensageiro LoRa</span>
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img class="img-fluid mb-3" src="img/projeto3.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
-        
-        <div class="text-center my-3">
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">LoRa</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">C++</span>
-          
-        </div>
-
-        <h4 class="mt-4">
-            <span class="en-content">About the Project</span>
-            <span class="pt-content">Sobre o Projeto</span>
-        </h4>
-        <p>
-            <span class="en-content">Two-way messenger using LoRa technology and long-distance E-Byte E220-900T22D chip with 10dBi omnidirectional antennas.</span>
-            <span class="pt-content">Mensageiro bidirecional usando tecnologia LoRa e chip E-Byte E220-900T22D de longa distância com antenas omnidirecionais de 10dBi.</span>
-        </p>
-
-        <h4 class="mt-4">
-            <span class="en-content">Features</span>
-            <span class="pt-content">Funcionalidades</span>
-        </h4>
-        <ul>
-          <li>
-              <span class="en-content">The messenger sends and receives messages without WiFi connection and Mobile Data, only using radio waves in the frequency 868-915 MHz.</span>
-              <span class="pt-content">O mensageiro envia e recebe mensagens sem conexão WiFi e Dados Móveis, usando apenas ondas de rádio na frequência 868-915 MHz.</span>
-          </li>
-          
-        </ul>
-        
-        
-        <h4 class="mt-4">
-            <span class="en-content">The Project</span>
-            <span class="pt-content">O Projeto</span>
-        </h4>
-        <p></p>
+        <!-- ==================== SEÇÃO: SKILLS / HABILIDADES ==================== -->
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+            <div class="my-auto">
+                <h2 class="mb-5">
+                    <span class="en-content">Skills</span>
+                    <span class="pt-content">Habilidades</span>
+                </h2>
                 
-        <div class="text-right mt-4">
-          <a class="btn btn-primary" href="" target="_blank">
-              <span class="en-content">Live Demo</span>
-              <span class="pt-content">Demo ao Vivo</span>
-          </a>
-          <a class="btn btn-outline-secondary" href="" target="_blank">GitHub</a>
+                <div class="subheading mb-4">
+                    <span class="en-content">Software and tools</span>
+                    <span class="pt-content">Software e ferramentas</span>
+                </div>
+                <div class="skills-grid">
+                    <figure class="skill-item">
+                        <img src="img/cpp.png" alt="C++">
+                        <figcaption>C/C++</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/python.png" alt="Python">
+                        <figcaption>Python</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/powerbi.png" alt="Power BI">
+                        <figcaption>Power BI</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/excel.png" alt="Excel">
+                        <figcaption>Excel</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/autocadel.svg" alt="AutoCad">
+                        <figcaption>AutoCad Electrical</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/sql.png" alt="SQL">
+                        <figcaption>SQL</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/kicad.png" alt="KiCad">
+                        <figcaption>KiCad PCB Design</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/opencv.png" alt="OpenCV">
+                        <figcaption>Computer Vision (OpenCV)</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/machine.png" alt="Machine Learning">
+                        <figcaption>Machine Learning</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/matlab.png" alt="MATLAB">
+                        <figcaption>MATLAB</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/aws.png" alt="AWS">
+                        <figcaption>AWS Cloud</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="subheading mb-4">Hardware</div>
+                <div class="skills-grid">
+                    <figure class="skill-item">
+                        <img src="img/rpi.png" alt="Raspberry Pi">
+                        <figcaption>Raspberry Pi</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/esp32.png" alt="ESP32">
+                        <figcaption>ESP32</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/arduino.png" alt="Arduino">
+                        <figcaption>Arduino</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/stm32.png" alt="STM32">
+                        <figcaption>STM32</figcaption>
+                    </figure>
+                    <figure class="skill-item">
+                        <img src="img/fpga.png" alt="FPGA">
+                        <figcaption>FPGA</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SEÇÃO: AREAS OF INTEREST / ÁREAS DE INTERESSE ==================== -->
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+            <div class="my-auto interests-section">
+                <h2 class="mb-5">
+                    <span class="en-content">Areas of Interest</span>
+                    <span class="pt-content">Áreas de Interesse</span>
+                </h2>
+
+                <p class="interests-intro mb-4">
+                    <span class="en-content">My professional interests are focused on areas that combine engineering, automation, applied data analysis, and process improvement. They reflect the direction in which I want to expand my technical background beyond embedded systems, while staying connected to practical problem-solving and operational efficiency.</span>
+                    <span class="pt-content">Meus interesses profissionais estão concentrados em áreas que combinam engenharia, automação, análise de dados aplicada e melhoria de processos. Eles refletem a direção em que pretendo expandir minha base técnica além de sistemas embarcados, sem perder a conexão com resolução prática de problemas e eficiência operacional.</span>
+                </p>
+
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <div class="interest-icon-wrapper"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                            <div>
+                                <h3 class="interest-title mb-0">
+                                    <span class="en-content">Process Automation</span>
+                                    <span class="pt-content">Automação de Processos</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="interest-text mb-0">
+                            <span class="en-content">Interest in solutions that reduce manual tasks, improve workflows, and increase operational efficiency through software, system integration, and control logic.</span>
+                            <span class="pt-content">Interesse em soluções que reduzam tarefas manuais, melhorem fluxos de trabalho e aumentem a eficiência operacional por meio de software, integração de sistemas e lógica de controle.</span>
+                        </p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <div class="interest-icon-wrapper"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+                            <div>
+                                <h3 class="interest-title mb-0">
+                                    <span class="en-content">Applied Data Analysis</span>
+                                    <span class="pt-content">Análise de Dados Aplicada</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="interest-text mb-0">
+                            <span class="en-content">Use of data for monitoring, decision support, pattern identification, and the development of indicators for engineering, operations, and technical performance.</span>
+                            <span class="pt-content">Uso de dados para monitoramento, suporte à decisão, identificação de padrões e desenvolvimento de indicadores voltados a contextos de engenharia, operações e desempenho técnico.</span>
+                        </p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <div class="interest-icon-wrapper"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                            <div>
+                                <h3 class="interest-title mb-0">
+                                    <span class="en-content">AI Applied to Engineering</span>
+                                    <span class="pt-content">IA Aplicada à Engenharia</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="interest-text mb-0">
+                            <span class="en-content">Application of artificial intelligence, machine learning, and intelligent automation to engineering problems, predictive analysis, and process optimization.</span>
+                            <span class="pt-content">Aplicação de inteligência artificial, machine learning e automação inteligente em problemas de engenharia, análise preditiva e otimização de processos.</span>
+                        </p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <div class="interest-icon-wrapper"><i class="fa fa-plug" aria-hidden="true"></i></div>
+                            <div>
+                                <h3 class="interest-title mb-0">
+                                    <span class="en-content">Systems Integration</span>
+                                    <span class="pt-content">Integração de Sistemas</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="interest-text mb-0">
+                            <span class="en-content">Connecting electronics, firmware, applications, APIs, and data processing to build practical, scalable, and performance-oriented solutions.</span>
+                            <span class="pt-content">Conexão entre eletrônica, firmware, aplicativos, APIs e processamento de dados para criar soluções práticas, escaláveis e orientadas a desempenho.</span>
+                        </p>
+                    </div>
+
+                    <div class="interest-card interest-card-wide">
+                        <div class="interest-card-header">
+                            <div class="interest-icon-wrapper"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                            <div>
+                                <h3 class="interest-title mb-0">
+                                    <span class="en-content">Operational Efficiency</span>
+                                    <span class="pt-content">Eficiência Operacional</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="interest-text mb-0">
+                            <span class="en-content">Development of solutions focused on process improvement, productivity, reliability, and smarter resource usage in technical and corporate environments.</span>
+                            <span class="pt-content">Desenvolvimento de soluções voltadas à melhoria de processos, produtividade, confiabilidade e uso mais inteligente de recursos em ambientes técnicos e corporativos.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SEÇÃO: PROJECTS / PROJETOS ==================== -->
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+            <div class="my-auto">
+                <h2 class="mb-5">
+                    <span class="en-content">Projects <span class="text-muted" style="font-size: 1.2rem; text-transform: none; font-family: 'Open Sans', sans-serif; font-weight: 400; vertical-align: middle; margin-left: 10px;">(under construction)</span></span>
+                    <span class="pt-content">Projetos <span class="text-muted" style="font-size: 1.2rem; text-transform: none; font-family: 'Open Sans', sans-serif; font-weight: 400; vertical-align: middle; margin-left: 10px;">(em construção)</span></span>
+                </h2>
+                
+                <div class="row portfolio-grid">
+                    <!-- ---------- CARD DO PROJETO 5: IoT Monitoring with ESP32 ---------- -->
+                    
+
+                    <!-- ---------- CARD DO PROJETO 1: ESP32 Connect ---------- -->
+                    <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj1">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="img/projeto1.png" alt="Aplicativo iOS para ESP32">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span class="en-content">ESP32 Connect</span>
+                                    <span class="pt-content">ESP32 Connect</span>
+                                </h5>
+                                <p class="card-text">ESP32, Bluetooth, iOS/Swift</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ---------- CARD DO PROJETO 2: Lyapunov Adaptative Control ---------- -->
+                  
+
+                    <!-- ---------- CARD DO PROJETO 3: LoRa Messenger ---------- -->
+                   
+
+                    <!-- ---------- CARD DO PROJETO 4: Vindex ---------- -->
+                    <div class="col-md-6 col-lg-3 col-xl-2 portfolio-item" data-toggle="modal" data-target="#modalProj4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="img/projeto4.png" alt="Vindex">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span class="en-content">Vindex</span>
+                                    <span class="pt-content">Vindex</span>
+                                </h5>
+                                <p class="card-text">C/C++, ESP32, Raspberry Pi</p>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- ----------------------------------------------------------------------->
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- fim .container-fluid -->
+
+    <!-- ==================== MODAIS DOS PROJETOS ==================== -->
+
+    <!-- ---------- MODAL DO PROJETO 1: ESP32 Connect / iOS App ---------- -->
+    <div class="modal fade" id="modalProj1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <span class="en-content">iOS App ESP32 Connect</span>
+                        <span class="pt-content">App iOS ESP32 Connect</span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mb-3" src="img/projeto1.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
+                    
+                    <div class="text-center my-3">
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Bluetooth</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">iOS/Swift</span>
+                    </div>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">About the Project</span>
+                        <span class="pt-content">Sobre o Projeto</span>
+                    </h4>
+                    <p>
+                        <span class="en-content">Online tools for creating mobile applications, such as MIT App Inventor—widely used in technical schools — do not (as of this project's development in Oct/24) support Bluetooth on Apple devices like the iPhone. To address this issue, this project focuses on creating a native iOS application using Swift that controls all GPIOs of one or multiple ESP32s simultaneously via Bluetooth Low Energy and WiFi.</span>
+                        <span class="pt-content">Ferramentas online para criação de apps móveis, como o MIT App Inventor — amplamente utilizado em escolas técnicas — não suportam (até a data de desenvolvimento deste projeto em Out/24) Bluetooth em dispositivos Apple, como o iPhone. Para resolver este problema, este projeto foca na criação de um aplicativo iOS nativo usando Swift para controlar todas as GPIOs de um ou múltiplos ESP32s simultaneamente via Bluetooth Low Energy e WiFi.</span>
+                    </p>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">Features</span>
+                        <span class="pt-content">Funcionalidades</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <span class="en-content">The application requires iOS 17 (or higher).</span>
+                            <span class="pt-content">O aplicativo requer iOS 17 (ou superior).</span>
+                        </li>
+                        <li>
+                            <span class="en-content">The control cards are pre-defined for the most common peripherals in educational electronics and robotics. <strong>Therefore, this application can be used for various purposes, such as controlling motors, general home appliances, teaching robotics, home automation, etc.</strong></span>
+                            <span class="pt-content">Os cartões de controle são pré-definidos para os periféricos mais comuns em eletrônica educacional e robótica. <strong>Portanto, este aplicativo pode ser usado para diversos fins, como controlar motores, eletrodomésticos gerais, ensino de robótica, automação residencial, etc.</strong></span>
+                        </li>
+                        <li>
+                            <span class="en-content">Inside the app, there is a section with the complete firmware to be uploaded to the ESP32 using the Arduino IDE, the pinout for the 30-pin ESP32, a serial monitor, and tutorials for basic electronics projects.</span>
+                            <span class="pt-content">Dentro do app, há uma seção com o firmware completo para ser carregado no ESP32 usando a IDE Arduino, o pinout para o ESP32 de 30 pinos, um monitor serial e tutoriais para projetos básicos de eletrônica.</span>
+                        </li>
+                        <li>
+                            <span class="en-content">The app is rich in control features: analog, digital, and PWM. It was designed to support robotics education and independent home automation. As of Sep/2025, no application with as many features is available for download on any platform.</span>
+                            <span class="pt-content">O app é rico em recursos de controle: analógico, digital e PWM. Foi projetado para apoiar o ensino de robótica e automação residencial independente. Até Set/2025, nenhum aplicativo com tantos recursos está disponível para download em qualquer plataforma.</span>
+                        </li>
+                    </ul>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">The App</span>
+                        <span class="pt-content">O App</span>
+                    </h4>
+                    <p><strong>
+                        <span class="en-content">Initial presentation with a brief tutorial on the app's features.</span>
+                        <span class="pt-content">Apresentação inicial com um breve tutorial das funcionalidades do app.</span>
+                    </strong></p>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image0.PNG" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image1.PNG" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image2.PNG" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    
+                    <p><strong>
+                        <span class="en-content">Connection screen. Available ESP32 microcontrollers will be listed here for connection via both Bluetooth and WiFi. It is possible to control the same ESP32 with both connections simultaneously.</span>
+                        <span class="pt-content">Tela de conexão. Microcontroladores ESP32 disponíveis serão listados aqui para conexão via Bluetooth e WiFi. É possível controlar o mesmo ESP32 com ambas as conexões simultaneamente.</span>
+                    </strong></p>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image3.PNG" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image4.PNG" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/image5.PNG" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    
+                    <div class="text-right mt-4">
+                        <a class="btn btn-primary" href="#" target="_blank">
+                            <span class="en-content">Live Demo</span>
+                            <span class="pt-content">Demo ao Vivo</span>
+                        </a>
+                        <a class="btn btn-outline-secondary" href="/docs/esp32.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true" style="margin-right: 5px;"></i>
+                            <span class="en-content">Case Study</span>
+                            <span class="pt-content">Estudo de Caso</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+
+    <!-- ---------- MODAL DO PROJETO 3: LoRa Messenger ---------- -->
+    <div class="modal fade" id="modalProj3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <span class="en-content">LoRa Messenger</span>
+                        <span class="pt-content">Mensageiro LoRa</span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mb-3" src="img/projeto3.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
+                    
+                    <div class="text-center my-3">
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">LoRa</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">C++</span>
+                    </div>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">About the Project</span>
+                        <span class="pt-content">Sobre o Projeto</span>
+                    </h4>
+                    <p>
+                        <span class="en-content">Two-way messenger using LoRa technology and long-distance E-Byte E220-900T22D chip with 10dBi omnidirectional antennas.</span>
+                        <span class="pt-content">Mensageiro bidirecional usando tecnologia LoRa e chip E-Byte E220-900T22D de longa distância com antenas omnidirecionais de 10dBi.</span>
+                    </p>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">Features</span>
+                        <span class="pt-content">Funcionalidades</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <span class="en-content">The messenger sends and receives messages without WiFi connection and Mobile Data, only using radio waves in the frequency 868-915 MHz.</span>
+                            <span class="pt-content">O mensageiro envia e recebe mensagens sem conexão WiFi e Dados Móveis, usando apenas ondas de rádio na frequência 868-915 MHz.</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="mt-4">
+                        <span class="en-content">The Project</span>
+                        <span class="pt-content">O Projeto</span>
+                    </h4>
+                    <p></p>
+                            
+                    <div class="text-right mt-4">
+                        <a class="btn btn-primary" href="" target="_blank">
+                            <span class="en-content">Live Demo</span>
+                            <span class="pt-content">Demo ao Vivo</span>
+                        </a>
+                        <a class="btn btn-outline-secondary" href="" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- MODAL DO PROJETO 4: Vindex ---------- -->
     <div class="modal fade" id="modalProj4" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">
-            <span class="en-content">Vindex</span>
-            <span class="pt-content">Vindex</span>
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img class="img-fluid mb-3" src="img/projeto4.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
-        
-        <div class="text-center my-3">
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Raspberry Pi</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Python</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Swift/iOS</span>
-          <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">SQL</span>
-          
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <span class="en-content">Vindex</span>
+                        <span class="pt-content">Vindex</span>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid mb-3" src="img/projeto4.png" alt="Main project image" style="max-width: 50%; display: block; margin: auto;">
+                    
+                    <div class="text-center my-3">
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Raspberry Pi</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">ESP32</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Python</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">Swift/iOS</span>
+                        <span class="badge badge-pill badge-primary" style="font-size: 1rem; padding: 0.5em 1em;">SQL</span>
+                    </div>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">About the Project</span>
+                        <span class="pt-content">Sobre o Projeto</span>
+                    </h4>
+                    <p>
+                        <span class="en-content">Safety device for motorcyclists: in the event of a fall of the motorcyclist, Vindex detects the fall, sends an emergency message to favorite contacts called "Guardians" and with a camera attached takes a photo for visual proof of the accident, being able to recognize vehicle plates for proof of culpability.</span>
+                        <span class="pt-content">Dispositivo de segurança para motociclistas: em caso de queda do motociclista, o Vindex detecta a queda, envia uma mensagem de emergência para contatos favoritos chamados "Guardiões" e com uma câmera acoplada tira uma foto para prova visual do acidente, sendo capaz de reconhecer placas de veículos para prova de culpabilidade.</span>
+                    </p>
+
+                    <h4 class="mt-4">
+                        <span class="en-content">Features</span>
+                        <span class="pt-content">Funcionalidades</span>
+                    </h4>
+                    <ul>
+                        <li>
+                            <span class="en-content">Continuous Monitoring</span>
+                            <span class="pt-content">Monitoramento Contínuo</span>
+                        </li>
+                        <li>
+                            <span class="en-content">Proof of culpability in the event of a collision</span>
+                            <span class="pt-content">Prova de culpabilidade em caso de colisão</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="mt-4">
+                        <span class="en-content">The app</span>
+                        <span class="pt-content">O App</span>
+                    </h4>
+                    <p>
+                        <span class="en-content">In case of an accident, the app sends an automatic message to the Guardian without any intervention from the driver</span>
+                        <span class="pt-content">Em caso de acidente, o app envia uma mensagem automática ao Guardião sem qualquer intervenção do condutor</span>
+                    </p>
+                            
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="img/00.png" class="img-fluid rounded" alt="Starting the app">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Starting the app</span>
+                                    <span class="pt-content">Iniciando o app</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/0.png" class="img-fluid rounded" alt="First time use">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">First time use</span>
+                                    <span class="pt-content">Primeira utilização</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/1.png" class="img-fluid rounded" alt="Home screen status">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Home screen status</span>
+                                    <span class="pt-content">Status da tela inicial</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/2.png" class="img-fluid rounded" alt="Add guardian">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Add guardian</span>
+                                    <span class="pt-content">Adicionar guardião</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/3.png" class="img-fluid rounded" alt="Configuring guardian via Telegram">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Configuring guardian via Telegram</span>
+                                    <span class="pt-content">Configurando guardião via Telegram</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/4.png" class="img-fluid rounded" alt="Guardian automatically configured">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Guardian automatically configured</span>
+                                    <span class="pt-content">Guardião automaticamente configurado</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/5.png" class="img-fluid rounded" alt="Settings screen">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Settings screen</span>
+                                    <span class="pt-content">Tela de configurações</span>
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="img/6.png" class="img-fluid rounded" alt="Automatic alert">
+                            <p class="text-muted text-center mt-2">
+                                <small>
+                                    <span class="en-content">Alert sent to the guardian automatically without rider intervention</span>
+                                    <span class="pt-content">Alerta que o guardião recebe automaticamente sem intervenção do motociclista</span>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-right mt-4">
+                        <a class="btn btn-primary" href="" target="_blank">
+                            <span class="en-content">Live Demo</span>
+                            <span class="pt-content">Demo ao Vivo</span>
+                        </a>
+                        <a class="btn btn-outline-secondary" href="" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <h4 class="mt-4">
-            <span class="en-content">About the Project</span>
-            <span class="pt-content">Sobre o Projeto</span>
-        </h4>
-        <p>
-            <span class="en-content">Safety device for motorcyclists: in the event of a fall of the motorcyclist, Vindex detects the fall, sends an emergency message to favorite contacts called "Guardians" and with a camera attached takes a photo for visual proof of the accident, being able to recognize vehicle plates for proof of culpability.</span>
-            <span class="pt-content">Dispositivo de segurança para motociclistas: em caso de queda do motociclista, o Vindex detecta a queda, envia uma mensagem de emergência para contatos favoritos chamados "Guardiões" e com uma câmera acoplada tira uma foto para prova visual do acidente, sendo capaz de reconhecer placas de veículos para prova de culpabilidade.</span>
-        </p>
-
-        <h4 class="mt-4">
-            <span class="en-content">Features</span>
-            <span class="pt-content">Funcionalidades</span>
-        </h4>
-        <ul>
-          <li>
-              <span class="en-content">Continuous Monitoring</span>
-              <span class="pt-content">Monitoramento Contínuo</span>
-          </li>
-          <li>
-              <span class="en-content">Proof of culpability in the event of a collision</span>
-              <span class="pt-content">Prova de culpabilidade em caso de colisão</span>
-          </li>
-          
-        </ul>
-        
-        
-        <h4 class="mt-4">
-            <span class="en-content">The app</span>
-            <span class="pt-content">O App</span>
-        </h4>
-        <p>
-            <span class="en-content">In case of an accident, the app sends an automatic message to the Guardian without any intervention from the driver</span>
-            <span class="pt-content">Em caso de acidente, o app envia uma mensagem automática ao Guardião sem qualquer intervenção do condutor</span>
-        </p>
-                
-        
-<div class="row">
-  <!-- Imagem 1 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/00.png" class="img-fluid rounded" alt="Starting the app">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Starting the app</span>
-        <span class="pt-content">Iniciando o app</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 2 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/0.png" class="img-fluid rounded" alt="First time use">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">First time use</span>
-        <span class="pt-content">Primeira utilização</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 3 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/1.png" class="img-fluid rounded" alt="Home screen status">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Home screen status</span>
-        <span class="pt-content">Status da tela inicial</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 4 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/2.png" class="img-fluid rounded" alt="Add guardian">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Add guardian</span>
-        <span class="pt-content">Adicionar guardião</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 5 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/3.png" class="img-fluid rounded" alt="Configuring guardian via Telegram">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Configuring guardian via Telegram</span>
-        <span class="pt-content">Configurando guardião via Telegram</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 6 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/4.png" class="img-fluid rounded" alt="Guardian automatically configured">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Guardian automatically configured</span>
-        <span class="pt-content">Guardião automaticamente configurado</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 7 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/5.png" class="img-fluid rounded" alt="Settings screen">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Settings screen</span>
-        <span class="pt-content">Tela de configurações</span>
-      </small>
-    </p>
-  </div>
-
-  <!-- Imagem 8 -->
-  <div class="col-md-4 mb-3">
-    <img src="img/6.png" class="img-fluid rounded" alt="Automatic alert">
-    <p class="text-muted text-center mt-2">
-      <small>
-        <span class="en-content">Alert sent to the guardian automatically without rider intervention</span>
-        <span class="pt-content">Alerta que o guardião recebe automaticamente sem intervenção do motociclista</span>
-      </small>
-    </p>
-  </div>
-</div>
-
-
-
-        
-        
-        
-
-        <div class="text-right mt-4">
-          <a class="btn btn-primary" href="" target="_blank">
-              <span class="en-content">Live Demo</span>
-              <span class="pt-content">Demo ao Vivo</span>
-          </a>
-          <a class="btn btn-outline-secondary" href="" target="_blank">GitHub</a>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<script src="vendor/jquery/jquery.min.js"></script>
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/resume.min.js"></script>
 
     <script>
-    // === LÓGICA DE TROCA DE IDIOMA ===
-    document.addEventListener('DOMContentLoaded', function() {
-        const langBtns = document.querySelectorAll('.lang-btn');
-        const body = document.body;
-        
-        // 1. Verificar se já existe preferência salva
-        const savedLang = localStorage.getItem('portfolio-lang') || 'en';
-        setLanguage(savedLang);
-
-        // 2. Adicionar evento de clique nas bandeiras
-        langBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                setLanguage(lang);
-            });
-        });
-
-        // Função para aplicar o idioma
-        function setLanguage(lang) {
-            // Remove as classes antigas
-            body.classList.remove('lang-en', 'lang-pt');
+        // ========== LÓGICA DE TROCA DE IDIOMA ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtns = document.querySelectorAll('.lang-btn');
+            const body = document.body;
             
-            // Adiciona a nova classe ao body
-            body.classList.add('lang-' + lang);
-            
-            // Atualiza a opacidade das bandeiras (UI)
+            const savedLang = localStorage.getItem('portfolio-lang') || 'en';
+            setLanguage(savedLang);
+
             langBtns.forEach(btn => {
-                if(btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                    btn.style.opacity = '1';
-                    btn.style.filter = 'grayscale(0%)';
-                } else {
-                    btn.classList.remove('active');
-                    btn.style.opacity = '0.4';
-                    btn.style.filter = 'grayscale(100%)';
-                }
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
             });
 
-            // Salva a preferência
-            localStorage.setItem('portfolio-lang', lang);
-        }
+            function setLanguage(lang) {
+                body.classList.remove('lang-en', 'lang-pt');
+                body.classList.add('lang-' + lang);
+                
+                langBtns.forEach(btn => {
+                    if(btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                        btn.style.opacity = '1';
+                        btn.style.filter = 'grayscale(0%)';
+                    } else {
+                        btn.classList.remove('active');
+                        btn.style.opacity = '0.4';
+                        btn.style.filter = 'grayscale(100%)';
+                    }
+                });
 
-        // === SEU SCRIPT ORIGINAL DE IMAGENS PEQUENAS ===
-        const cardImages = document.querySelectorAll('.portfolio-grid .card-img-top');
-        cardImages.forEach(img => {
-            img.addEventListener('load', function() {
-                const container = this.closest('.card-img-wrapper');
-                if (this.naturalWidth < 150 || this.naturalHeight < 100) {
-                    container.classList.add('has-small-image');
-                }
-            });
-            img.addEventListener('error', function() {
-                this.classList.add('error');
-                this.alt = 'Imagem não carregada';
+                localStorage.setItem('portfolio-lang', lang);
+            }
+
+            // ========== SCRIPT DE IMAGENS PEQUENAS ==========
+            const cardImages = document.querySelectorAll('.portfolio-grid .card-img-top');
+            cardImages.forEach(img => {
+                img.addEventListener('load', function() {
+                    const container = this.closest('.card-img-wrapper');
+                    if (this.naturalWidth < 150 || this.naturalHeight < 100) {
+                        container.classList.add('has-small-image');
+                    }
+                });
+                img.addEventListener('error', function() {
+                    this.classList.add('error');
+                    this.alt = 'Imagem não carregada';
+                });
             });
         });
-    });
     </script>
-  </body>
+</body>
 
 </html>
